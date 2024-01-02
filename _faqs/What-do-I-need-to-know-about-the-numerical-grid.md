@@ -8,7 +8,7 @@ Tidy3D tries to provide an illusion of continuity as much as possible,
 but at the level of the solver a finite numerical grid is used, which
 can have some implications that advanced users may want to be aware of.
 
-![Field components on the Yee grid](/assets/images/FAQ/yee_grid.png){: width="600px"}
+![Field components on the Yee grid](./img/yee_grid.png){: width="600px"}
 
 The FDTD method for electromagnetic simulations uses what\'s called the
 Yee grid, in which every field component is defined at a different

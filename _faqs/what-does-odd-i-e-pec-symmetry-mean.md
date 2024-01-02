@@ -26,4 +26,4 @@ _inputs:
 ---
 PEC symmetry (odd) corresponds to zero normal electric field and zero tangential magnetic field at the symmetry plane.
 
-![](/uploads/pec-1.png){: width="223" height="485"}
+![](./img/pec-1.png){: width="223" height="485"}
