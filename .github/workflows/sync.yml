@@ -8,7 +8,7 @@ on:
         required: true
       targetBranch:
         description: target branch
-        default: develop
+        default: tidy3d-faq
         required: true 
 
 jobs:

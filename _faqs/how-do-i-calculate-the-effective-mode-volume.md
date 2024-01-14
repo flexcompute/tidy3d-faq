@@ -2,13 +2,13 @@
 _schema: default
 title: How do I calculate the effective mode volume?
 date: 2023-12-20 19:27:35
-enable: true
+enabled: true
 category: Resonance Finder
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

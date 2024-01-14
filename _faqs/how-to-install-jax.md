@@ -2,13 +2,13 @@
 _schema: default
 title: How to install jax?
 date: 2023-12-21 21:38:20
-enable: true
+enabled: true
 category: Inverse Design
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

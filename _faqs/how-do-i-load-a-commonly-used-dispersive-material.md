@@ -1,7 +1,7 @@
 ---
 title: How do I load a commonly used dispersive material?
 date: 2023-12-05 19:44:23
-enable: true
+enabled: true
 category: "Mediums"
 ---
 <div><div>Tidy3D has an extensive <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api.html#material-library">material library</a>&nbsp;containing various dispersive models from real world materials. You can import one of several material models using only a single line of code, as below:</div><div> </div></div>

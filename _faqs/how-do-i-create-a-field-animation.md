@@ -2,13 +2,13 @@
 _schema: default
 title: How do I create a time-domain field animation?
 date: 2023-12-19 15:04:11
-enable: true
+enabled: true
 category: Monitors
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

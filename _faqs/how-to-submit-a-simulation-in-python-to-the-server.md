@@ -1,7 +1,7 @@
 ---
 title: How to submit a simulation in Python to the server?
 date: 2023-12-03 13:12:40
-enable: true
+enabled: true
 category: "Simulations"
 ---
 <div>Submitting a simulation to our cloud server is very easily done by a simple web API call.</div>

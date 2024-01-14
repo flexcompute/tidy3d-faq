@@ -2,13 +2,13 @@
 _schema: default
 title: How do I plot the mode group index versus wavelength?
 date: 2023-12-18 21:52:10
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

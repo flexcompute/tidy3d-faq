@@ -2,13 +2,13 @@
 _schema: default
 title: How do I create a dispersive material from model parameters?
 date: 2023-12-05 19:26:45
-enable: true
+enabled: true
 category: Mediums
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

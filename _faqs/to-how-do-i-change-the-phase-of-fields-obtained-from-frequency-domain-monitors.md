@@ -2,13 +2,13 @@
 _schema: default
 title: How do I change the phase of fields obtained from frequency-domain monitors?
 date: 2023-12-19 20:07:15
-enable: true
+enabled: true
 category: Monitors
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

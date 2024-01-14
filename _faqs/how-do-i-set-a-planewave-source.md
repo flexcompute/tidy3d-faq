@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set a PlaneWave source?
 date: 2023-12-08 12:26:07
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

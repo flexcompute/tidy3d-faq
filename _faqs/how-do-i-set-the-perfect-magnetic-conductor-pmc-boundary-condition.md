@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set the perfect magnetic conductor (PMC) boundary condition?
 date: 2023-12-14 20:30:51
-enable: true
+enabled: true
 category: Boundary Conditions
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

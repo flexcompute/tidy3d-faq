@@ -2,13 +2,13 @@
 _schema: default
 title: How do I change the global plot characteristics (title, size, etc)?
 date: 2023-12-18 22:57:51
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -2,13 +2,13 @@
 _schema: default
 title: How are results normalized?
 date: 2023-10-24 15:21:50
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

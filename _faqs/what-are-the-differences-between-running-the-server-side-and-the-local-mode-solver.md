@@ -4,13 +4,13 @@ title: >-
   What are the differences between running the server-side and the local mode
   solver?
 date: 2023-12-18 17:45:50
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

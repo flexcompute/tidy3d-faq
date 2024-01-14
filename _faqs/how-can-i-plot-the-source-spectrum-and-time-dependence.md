@@ -2,13 +2,13 @@
 _schema: default
 title: How can I plot the source spectrum and time-dependence?
 date: 2023-12-11 17:33:25
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

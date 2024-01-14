@@ -1,7 +1,7 @@
 ---
 title: How do I include material dispersion?
 date: 2023-10-24 16:28:59
-enable: true
+enabled: true
 category: "Mediums"
 ---
 Dispersive materials are supported in Tidy3D and we provide an extensive [material library](https://docs.flexcompute.com/projects/tidy3d/en/latest/api.html#material-library){: .color-primary-hover} with pre-defined materials. Standard [dispersive material models](https://docs.flexcompute.com/projects/tidy3d/en/latest/api.html#dispersive-mediums){: .color-primary-hover} can also be defined. If you need help inputting a custom material, let us know!

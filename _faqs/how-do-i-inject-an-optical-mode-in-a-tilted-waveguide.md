@@ -2,13 +2,13 @@
 _schema: default
 title: How do I inject an optical mode in an angled waveguide?
 date: 2023-12-08 14:55:25
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

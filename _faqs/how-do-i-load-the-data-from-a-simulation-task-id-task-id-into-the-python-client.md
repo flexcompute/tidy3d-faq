@@ -1,7 +1,7 @@
 ---
 title: "How do I load the data from a simulation\_task ID\_into the Python client?"
 date: 2023-12-03 20:17:10
-enable: false
+enabled: false
 category: "Simulations"
 ---
 After the simulation is complete, you can load the results into a&nbsp;[SimulationData](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.SimulationData.html#tidy3d.SimulationData)&nbsp;object by its `task_id` using:

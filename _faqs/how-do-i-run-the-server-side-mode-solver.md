@@ -2,13 +2,13 @@
 _schema: default
 title: How do I run the server-side mode solver?
 date: 2023-12-18 17:33:17
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

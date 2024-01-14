@@ -2,13 +2,13 @@
 _schema: default
 title: How do I model an optical fiber mode source?
 date: 2023-12-11 14:41:31
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

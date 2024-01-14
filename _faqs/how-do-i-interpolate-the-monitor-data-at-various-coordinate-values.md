@@ -2,13 +2,13 @@
 _schema: default
 title: How do I interpolate the monitor data at various coordinate values?
 date: 2023-12-19 14:53:37
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

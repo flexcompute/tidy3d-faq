@@ -2,13 +2,13 @@
 _schema: default
 title: How do I interpolate the electromagnetic field data at the Yee cell centers?
 date: 2023-12-19 12:29:51
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

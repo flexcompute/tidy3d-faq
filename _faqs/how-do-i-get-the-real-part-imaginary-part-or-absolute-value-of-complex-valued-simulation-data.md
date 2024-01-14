@@ -4,13 +4,13 @@ title: >-
   How do I get the real part, imaginary part, or absolute value of
   complex-valued simulation data?
 date: 2023-12-19 15:25:59
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

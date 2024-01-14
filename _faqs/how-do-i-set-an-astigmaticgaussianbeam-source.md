@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set an AstigmaticGaussianBeam source?
 date: 2023-12-11 15:07:45
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -1,7 +1,7 @@
 ---
 title: How fine of a grid or mesh does my simulation need? How to choose grid spec?
 date: 2023-12-04 18:56:06
-enable: true
+enabled: true
 category: "Grid Specification"
 ---
 The FDTD and other similar numerical methods will always give approximate results for a set of finite-difference equations. The accuracy of Maxwell's equations solution for any geometry can be arbitrarily increased by using smaller and smaller values of the space and time increments. This strategy often involves increased simulation time and memory, so it is essential to consider, for your application, what is the desired accuracy in results so that you can run your simulations as quickly as possible. As a gold rule of thumb, ten grid points per wavelength in the highest refractive index medium should be a good starting value for the grid resolution. However, other application specificities must be considered when defining the appropriate simulation mesh, such as very thin geometries or large electric field gradients, as usually occurs, for example, in the presence of resonances, highly confined fields, or at metal-dielectric interfaces.

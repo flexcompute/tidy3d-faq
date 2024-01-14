@@ -1,7 +1,7 @@
 ---
 title: What do I need to know about the numerical grid?
 date: 2023-10-24 18:43:17
-enable: true
+enabled: true
 category: "Grid Specification"
 ---
 Tidy3D tries to provide an illusion of continuity as much as possible,

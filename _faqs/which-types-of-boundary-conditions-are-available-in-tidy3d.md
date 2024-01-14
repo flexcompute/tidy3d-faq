@@ -2,13 +2,13 @@
 _schema: default
 title: Which types of boundary conditions are available in Tidy3D?
 date: 2023-10-24 14:48:15
-enable: true
+enabled: true
 category: Boundary Conditions
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

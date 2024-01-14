@@ -2,13 +2,13 @@
 _schema: default
 title: "How do I get a specific field component from a\_FieldMonitor\_or\_FieldTimeMonitor?"
 date: 2023-12-19 15:46:44
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -2,13 +2,13 @@
 _schema: default
 title: How can I get the mode field distribution?
 date: 2023-12-18 21:38:30
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -2,13 +2,13 @@
 _schema: default
 title: How do I compute scattering matrix parameters for modeling my device?
 date: 2023-12-20 16:57:31
-enable: true
+enabled: true
 category: Scattering Matrix
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

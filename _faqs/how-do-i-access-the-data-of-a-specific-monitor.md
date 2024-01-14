@@ -2,13 +2,13 @@
 _schema: default
 title: How do I access the data of a specific monitor?
 date: 2023-12-18 23:02:06
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

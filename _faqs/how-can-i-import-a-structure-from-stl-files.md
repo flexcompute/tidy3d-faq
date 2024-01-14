@@ -1,7 +1,7 @@
 ---
 title: How can I import a structure from STL files?
 date: 2023-12-06 21:10:36
-enable: true
+enabled: true
 category: "Structures"
 ---
 To use the STL import functionality, you must install Tidy3D as&nbsp;`pip install "tidy3d[trimesh]"`, which will install optional dependencies needed for processing surface meshes. Then you can use the [tidy3d.TriangleMesh.from\_stl()](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.TriangleMesh.html#tidy3d.TriangleMesh.from_stl){: target="_blank" rel="noopener"} function. In the following example we will import a simple box geometry from a STL file.

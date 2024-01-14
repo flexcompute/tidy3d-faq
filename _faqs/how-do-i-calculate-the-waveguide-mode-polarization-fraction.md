@@ -2,13 +2,13 @@
 _schema: default
 title: How do I calculate the waveguide mode polarization fraction?
 date: 2023-12-18 22:09:16
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

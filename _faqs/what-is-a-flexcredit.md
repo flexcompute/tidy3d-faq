@@ -1,7 +1,7 @@
 ---
 title: What is a FlexCredit?
 date: 2023-12-03 10:51:02
-enable: true
+enabled: true
 category: "About Tidy3D"
 ---
 FlexCredit is Flexcompute’s way of measuring computing power. It's a unit we created to make it easier to understand and buy computing power.

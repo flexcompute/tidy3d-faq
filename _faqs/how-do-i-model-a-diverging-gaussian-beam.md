@@ -2,13 +2,13 @@
 _schema: default
 title: How do I model a diverging Gaussian beam?
 date: 2023-12-11 15:03:33
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

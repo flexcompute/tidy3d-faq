@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set a custom field source?
 date: 2023-12-11 15:31:59
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

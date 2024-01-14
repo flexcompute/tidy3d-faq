@@ -1,7 +1,7 @@
 ---
 title: Can you convert a lumerical script file to Tidy3D?
 date: 2023-10-24 19:16:52
-enable: false
+enabled: false
 ---
 We offer a limited ability to convert Lumerical .lsf project files to
 Tidy3D skeleton files in python. This can be done with the command

@@ -2,13 +2,13 @@
 _schema: default
 title: How do I model a converging Gaussian beam?
 date: 2023-12-11 14:56:49
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

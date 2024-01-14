@@ -2,13 +2,13 @@
 _schema: default
 title: "How do I  get the monitor's data from a\_SimulationData\_object?"
 date: 2023-12-19 13:12:20
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

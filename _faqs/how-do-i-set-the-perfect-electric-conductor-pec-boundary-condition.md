@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set the perfect electric conductor (PEC) boundary condition?
 date: 2023-12-14 20:21:21
-enable: true
+enabled: true
 category: Boundary Conditions
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

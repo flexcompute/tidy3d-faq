@@ -1,7 +1,7 @@
 ---
 title: Why can I not change Tidy3D instances after they are created?
 date: 2023-10-24 18:09:43
-enable: true
+enabled: true
 category: 'Simulation Troubleshoot'
 ---
 You may notice in Tidy3D versions 1.5 and above that it is no longer

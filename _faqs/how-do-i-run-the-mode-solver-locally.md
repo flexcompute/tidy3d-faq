@@ -2,13 +2,13 @@
 _schema: default
 title: How do I run the mode solver locally?
 date: 2023-12-18 17:27:21
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

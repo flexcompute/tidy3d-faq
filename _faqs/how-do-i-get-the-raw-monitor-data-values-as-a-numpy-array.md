@@ -2,13 +2,13 @@
 _schema: default
 title: "How do I get the raw monitor data values as a\_numpy\_array?"
 date: 2023-12-19 15:40:09
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

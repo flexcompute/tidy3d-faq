@@ -2,13 +2,13 @@
 _schema: default
 title: How do I project electromagnetic near-field data to the far field?
 date: 2023-12-19 16:42:38
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

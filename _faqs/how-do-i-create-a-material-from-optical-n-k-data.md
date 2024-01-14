@@ -1,7 +1,7 @@
 ---
 title: How do I create a material from optical n, k data?
 date: 2023-12-05 19:10:21
-enable: true
+enabled: true
 category: "Mediums"
 ---
 You can import your own tabulated material data and fit it using one of Tidy3D's dispersion fitting tools. The [Fast](__notset__)[DispersionFitter](https://docs.flexcompute.com/projects/tidy3d/en/stable/_autosummary/tidy3d.plugins.dispersion.FastDispersionFitter.html){: rel="nofollow"}&nbsp;tool performs an optimization to find a medium defined as a dispersive PoleResidue model that minimizes the RMS error between the model results and the data. The user can provide data through one of the following methods:

@@ -2,13 +2,13 @@
 _schema: default
 title: How do I filter out waveguide modes using symmetry?
 date: 2023-12-15 16:27:04
-enable: true
+enabled: true
 category: Symmetry
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

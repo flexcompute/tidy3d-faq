@@ -1,7 +1,7 @@
 ---
 title: How can I troubleshoot a diverged FDTD simulation?
 date: 2023-12-04 22:43:53
-enable: true
+enabled: true
 category: "Simulation Troubleshoot"
 ---
 <div>Tidy3D uses the Finite-Difference Time-Domain (FDTD) method, which is a popular technique for rigorously solving Maxwell's equations. However, like all numerical methods, it can sometimes diverge if not properly set up. An FDTD simulation can diverge due to various reasons. In this article, we discuss common FDTD setting issues that could potentially lead to simulation divergence. If your simulation diverged, please follow this article and perform thorough troubleshooting, which will likely resolve the issue and ensure that your next FDTD run is stable.</div>

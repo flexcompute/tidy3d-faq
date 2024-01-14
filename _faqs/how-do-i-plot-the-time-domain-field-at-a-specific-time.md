@@ -2,13 +2,13 @@
 _schema: default
 title: How do I plot the time-domain field at a specific time?
 date: 2023-12-19 15:14:00
-enable: true
+enabled: true
 category: Monitors
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -2,13 +2,13 @@
 _schema: default
 title: How do I plot the mode effective index versus wavelength?
 date: 2023-12-18 21:43:47
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

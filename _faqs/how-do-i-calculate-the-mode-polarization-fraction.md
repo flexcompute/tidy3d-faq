@@ -2,13 +2,13 @@
 _schema: default
 title: How do I calculate the mode polarization fraction?
 date: 2023-12-18 21:59:37
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

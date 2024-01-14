@@ -2,13 +2,13 @@
 _schema: default
 title: How do I plot an object with a spatial definition?
 date: 2023-12-18 22:43:01
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

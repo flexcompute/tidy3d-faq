@@ -2,13 +2,13 @@
 _schema: default
 title: "How do I plot the\_monitor data\_as a function of one of its coordinates?"
 date: 2023-12-19 15:52:31
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

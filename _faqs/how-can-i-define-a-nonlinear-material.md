@@ -1,7 +1,7 @@
 ---
 title: How can I define a nonlinear material?
 date: 2023-12-05 20:35:00
-enable: true
+enabled: true
 category: "Mediums"
 ---
 To create nonlinear material you should specify a [tidy3d.NonlinearSusceptibility](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.NonlinearSusceptibility.html#tidy3d.NonlinearSusceptibility){: target="_blank" rel="noopener"}&nbsp;to the&nbsp;`nonlinear_spec`&nbsp;parameter of any medium. For example:

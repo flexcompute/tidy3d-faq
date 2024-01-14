@@ -2,13 +2,13 @@
 _schema: default
 title: How do I export the final inverse design structure to GDS?
 date: 2023-12-21 23:19:25
-enable: true
+enabled: true
 category: Inverse Design
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

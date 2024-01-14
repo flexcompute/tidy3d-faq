@@ -2,13 +2,13 @@
 _schema: default
 title: How do I get the coupling efficiency of a specific waveguide mode?
 date: 2023-12-19 17:05:41
-enable: true
+enabled: true
 category: Monitors
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

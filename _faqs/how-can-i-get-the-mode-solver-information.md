@@ -2,13 +2,13 @@
 _schema: default
 title: How can I get the mode solver information?
 date: 2023-12-18 21:23:43
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

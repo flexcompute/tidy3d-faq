@@ -1,7 +1,7 @@
 ---
 title: How do I create a sphere?
 date: 2023-12-06 21:43:10
-enable: true
+enabled: true
 category: "Structures"
 ---
 You can create a sphere using the&nbsp;[tidy3d.Sphere](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Sphere.html){: target="_blank" rel="noopener"}&nbsp;object and specifying the `center` and `radius` parameters, as below:

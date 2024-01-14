@@ -2,13 +2,13 @@
 _schema: default
 title: How do I create an adjoint parameterized level set optimization?
 date: 2023-12-21 22:43:05
-enable: true
+enabled: true
 category: Inverse Design
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

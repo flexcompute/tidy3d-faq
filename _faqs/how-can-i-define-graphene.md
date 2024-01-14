@@ -1,7 +1,7 @@
 ---
 title: How can I define graphene?
 date: 2023-12-05 20:22:01
-enable: true
+enabled: true
 category: "Mediums"
 ---
 You can create a graphene medium using&nbsp;[tidy3d.Graphene](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Graphene.html#tidy3d.Graphene){: target="_blank" rel="noopener"}, which defines a parametric surface conductivity model for graphene. For example:

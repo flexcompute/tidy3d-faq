@@ -2,13 +2,13 @@
 _schema: default
 title: How do I get the monitor data at a certain index?
 date: 2023-12-19 14:49:03
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

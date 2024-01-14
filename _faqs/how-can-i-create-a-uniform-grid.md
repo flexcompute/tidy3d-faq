@@ -2,13 +2,13 @@
 _schema: default
 title: How can I create a uniform grid?
 date: 2023-12-11 18:47:30
-enable: true
+enabled: true
 category: Grid Specification
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

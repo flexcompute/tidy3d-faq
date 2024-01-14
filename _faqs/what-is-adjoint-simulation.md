@@ -2,13 +2,13 @@
 _schema: default
 title: What is adjoint simulation?
 date: 2023-12-21 18:38:55
-enable: true
+enabled: true
 category: Inverse Design
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

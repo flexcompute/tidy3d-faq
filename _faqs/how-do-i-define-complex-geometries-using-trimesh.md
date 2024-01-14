@@ -1,7 +1,7 @@
 ---
 title: How do I define complex geometries using trimesh?
 date: 2023-12-06 22:59:52
-enable: true
+enabled: true
 category: "Structures"
 ---
 To define complex geometries using the&nbsp;[Trimesh](https://trimsh.org/index.html)&nbsp;library, you must install Tidy3D as&nbsp;`pip install "tidy3d[trimesh]"`, which will install optional dependencies needed for processing surface meshes. The Trimesh library provides some&nbsp;[built-in geometries](https://trimsh.org/trimesh.creation.html#)&nbsp;such as ring (annulus), box, capsule, cone, cylinder, and so on. Let's create a ring as an example.

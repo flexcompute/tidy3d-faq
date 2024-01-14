@@ -1,7 +1,7 @@
 ---
 title: How do I create an anisotropic material?
 date: 2023-12-05 19:12:04
-enable: true
+enabled: true
 category: "Mediums"
 ---
 To create fully anisotropic mediums including all 9 components of the permittivity and conductivity tensors, you can use the [tidy3d.FullyAnisotropicMedium](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.FullyAnisotropicMedium.html){: target="_blank" rel="noopener"} object. The provided permittivity tensor and the symmetric part of the conductivity tensor must have coinciding main directions. However, a non-symmetric conductivity tensor can be used to model magneto-optic effects. Note that dispersive properties and subpixel averaging are currently not supported for fully anisotropic materials.

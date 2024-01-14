@@ -1,7 +1,7 @@
 ---
 title: Why is a simulation diverging?
 date: 2023-10-24 15:55:24
-enable: true
+enabled: true
 category: "Simulation Troubleshoot"
 ---
 Sometimes, a simulation is numerically unstable and can result in

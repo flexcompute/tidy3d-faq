@@ -2,13 +2,13 @@
 _schema: default
 title: How do I specify different boundary conditions on each simulation domain edge?
 date: 2023-12-15 21:23:27
-enable: true
+enabled: true
 category: Boundary Conditions
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

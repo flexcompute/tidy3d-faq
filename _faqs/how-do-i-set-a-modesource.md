@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set a ModeSource?
 date: 2023-12-08 13:27:54
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

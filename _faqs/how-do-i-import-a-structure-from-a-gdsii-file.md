@@ -1,7 +1,7 @@
 ---
 title: How do I import a structure from a GDSII file?
 date: 2023-12-06 19:13:06
-enable: true
+enabled: true
 category: "Structures"
 ---
 In Tidy3D, complex structures can be imported from GDSII files via the third-party&nbsp;[gdstk](https://heitzmann.github.io/gdstk/)&nbsp;package, which you can install running&nbsp;`pip install gdstk`. To load the geometry from a GDSII file, you should select the cell with the geometry you want. It is usually easier to verify that we can find the correct one by name first, for example:

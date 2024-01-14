@@ -2,13 +2,13 @@
 _schema: default
 title: How do I specify mappings between scattering matrix elements?
 date: 2023-12-20 18:30:12
-enable: true
+enabled: true
 category: Scattering Matrix
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

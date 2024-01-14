@@ -1,7 +1,7 @@
 ---
 title: Why did my simulation finish early?
 date: 2023-10-24 17:02:34
-enable: true
+enabled: true
 category: "Simulation Troubleshoot"
 ---
 By default, Tidy3D checks periodically the total field intensity left in

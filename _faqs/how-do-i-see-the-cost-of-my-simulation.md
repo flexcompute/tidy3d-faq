@@ -1,7 +1,7 @@
 ---
 title: How do I see the cost of my simulation?
 date: 2023-12-04 20:20:48
-enable: true
+enabled: true
 category: "Simulations"
 ---
 To obtain the cost of a simulation, you can use the function `tidy3d.web.real_cost(task_id)`. In the example below, a job is created, and its cost is estimated. After running the simulation, the real cost can be obtained. It is important to note that the real cost may not be available immediately after the simulation is finished.

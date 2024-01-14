@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set the source frequency and bandwidth?
 date: 2023-12-11 16:17:31
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

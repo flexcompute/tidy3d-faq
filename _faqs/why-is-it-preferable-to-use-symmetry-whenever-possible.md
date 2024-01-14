@@ -2,13 +2,13 @@
 _schema: default
 title: Why is it preferable to use symmetry whenever possible?
 date: 2023-12-15 16:18:40
-enable: true
+enabled: true
 category: Symmetry
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

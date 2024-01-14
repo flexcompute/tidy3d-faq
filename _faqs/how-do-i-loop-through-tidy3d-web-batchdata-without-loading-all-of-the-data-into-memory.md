@@ -1,7 +1,7 @@
 ---
 title: "How do I loop through\_tidy3d.web.BatchData\_without loading all of the data into memory?"
 date: 2023-12-04 20:01:52
-enable: true
+enabled: true
 category: "Parameter Sweep"
 ---
 <div>After running the simulations, you can get the results from the&nbsp;<a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.web.BatchData.html#tidy3d.web.BatchData">tidy3d.web.BatchData</a>&nbsp;object directly, using for example &nbsp;<code>sim_data_1 = batch_results["sim_1"]</code>. Or iterating over it in a loop, as below:</div>

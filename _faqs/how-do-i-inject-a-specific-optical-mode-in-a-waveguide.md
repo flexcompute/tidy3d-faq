@@ -2,13 +2,13 @@
 _schema: default
 title: How do I inject a specific optical mode in a waveguide?
 date: 2023-12-08 14:49:12
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

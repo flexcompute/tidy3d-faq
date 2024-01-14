@@ -2,13 +2,13 @@
 _schema: default
 title: What does “even, i.e. ‘PMC’ symmetry” mean?
 date: 2023-12-15 16:26:26
-enable: true
+enabled: true
 category: Symmetry
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -2,13 +2,13 @@
 _schema: default
 title: How do I include fabrication constraints in adjoint level set optimization?
 date: 2023-12-21 23:09:21
-enable: true
+enabled: true
 category: Inverse Design
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

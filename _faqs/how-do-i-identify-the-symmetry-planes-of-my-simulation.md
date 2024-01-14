@@ -2,13 +2,13 @@
 _schema: default
 title: How do I identify the symmetry planes of my simulation?
 date: 2023-12-15 16:23:55
-enable: true
+enabled: true
 category: Symmetry
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -4,13 +4,13 @@ title: >-
   What are the differences between adjoint shape, topology, and level set
   optimizations?
 date: 2023-12-21 20:21:23
-enable: true
+enabled: true
 category: Inverse Design
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

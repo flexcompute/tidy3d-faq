@@ -1,7 +1,7 @@
 ---
 title: How many CPU hours is one FlexCredit comparable to?
 date: 2023-12-03 10:53:25
-enable: true
+enabled: true
 category: "About Tidy3D"
 ---
 One FlexCredit is equivalent to about 50 hours of CPU core time when using the traditional FDTD method. That's the equivalent of running a computer processor core for two days straight, just for one FlexCredit!

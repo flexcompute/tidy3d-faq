@@ -1,7 +1,7 @@
 ---
 title: How do I submit multiple simulations?
 date: 2023-12-04 14:46:02
-enable: true
+enabled: true
 category: Parameter Sweep
 ---
 <div><div>To submit multiple simulations and run them concurrently in the server, you can create a&nbsp;<a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.web.Batch.html#tidy3d.web.Batch">tidy3d.web.Batch</a> object including all the simulations you want to run. Then, use&nbsp;<code>tidy3d.web.Batch.run()</code> to upload, run, and get the simulations results in a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.web.BatchData.html#tidy3d.web.BatchData">tidy3d.web.BatchData</a> object. For example:</div><div><div markdown class="code-snippet">{% highlight python %}

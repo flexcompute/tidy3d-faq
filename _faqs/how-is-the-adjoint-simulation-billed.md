@@ -2,13 +2,13 @@
 _schema: default
 title: How is the adjoint simulation billed?
 date: 2023-12-21 21:19:39
-enable: true
+enabled: true
 category: Inverse Design
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

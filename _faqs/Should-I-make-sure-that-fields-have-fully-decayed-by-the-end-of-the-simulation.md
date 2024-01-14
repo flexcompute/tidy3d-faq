@@ -1,7 +1,7 @@
 ---
 title: Should I make sure that fields have fully decayed by the end of the simulation?
 date: 2023-10-24 17:36:08
-enable: true
+enabled: true
 category: "Simulation Troubleshoot"
 ---
 Conversely to early termination, you may sometimes get a warning that

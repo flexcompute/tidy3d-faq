@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set a GaussianBeam?
 date: 2023-12-11 14:19:04
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

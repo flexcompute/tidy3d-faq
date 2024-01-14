@@ -4,13 +4,13 @@ title: >-
   How do I change the object plotting characteristics (facecolor, edgecolor,
   etc)?
 date: 2023-12-18 22:53:35
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

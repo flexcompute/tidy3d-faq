@@ -2,13 +2,13 @@
 _schema: default
 title: How do I plot the simulation structure on top of my field plot?
 date: 2023-12-19 16:28:19
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

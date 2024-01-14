@@ -1,7 +1,7 @@
 ---
 title: How can I define a 2D material?
 date: 2023-12-05 20:06:53
-enable: true
+enabled: true
 category: "Mediums"
 ---
 You can create a 2D material using the&nbsp;[tidy3d.Medium2D](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Medium2D.html){: target="_blank" rel="noopener"}&nbsp;object. This is specialy helpful to build very thin materials, like metal layers.

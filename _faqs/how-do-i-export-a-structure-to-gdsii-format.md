@@ -1,7 +1,7 @@
 ---
 title: How do I export a structure to GDSII format?
 date: 2023-12-06 21:17:44
-enable: true
+enabled: true
 category: "Structures"
 ---
 In Tidy3D, you can export structures to GDSII file via the third-party&nbsp;[gdstk](https://heitzmann.github.io/gdstk/)&nbsp;package, which you can install running&nbsp;`pip install gdstk`. The example below creates a simple geometry and then exports it to GDSII:

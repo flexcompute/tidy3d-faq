@@ -2,13 +2,13 @@
 _schema: default
 title: How do I calculate the power radiated by a PointDipole source?
 date: 2023-12-08 11:40:56
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -3,7 +3,7 @@ title: >-
   How to use the automatic nonuniform meshing? What steps per wavelength will be
   sufficient?
 date: 2023-12-04 18:58:43
-enable: true
+enabled: true
 category: "Grid Specification"
 ---
 By default, Tidy3D configures the&nbsp;[GridSpec](https://docs.flexcompute.com/projects/tidy3d/en/stable/_autosummary/tidy3d.GridSpec.html){: rel="nofollow"}&nbsp;object to having&nbsp;[AutoGrid](https://docs.flexcompute.com/projects/tidy3d/en/stable/_autosummary/tidy3d.AutoGrid.html){: rel="nofollow"}, which is an advanced meshing algorithm to automatically define a nonuniform grid, in all the three domain direction. The resolution of this grid is specified using the desired minimum steps per wavelength in each material (`min_steps_per_wvl = 10 by default`). This specification, therefore, requires a target wavelength, which can be either provided directly to&nbsp;`grid_spec`&nbsp;or inferred from any sources present in the simulation. Detailed examples on how to set up&nbsp;[AutoGrid](https://docs.flexcompute.com/projects/tidy3d/en/stable/_autosummary/tidy3d.AutoGrid.html){: rel="nofollow"}&nbsp;are present on this&nbsp;[notebook](https://www.flexcompute.com/tidy3d/examples/notebooks/AutoGrid/){: rel="nofollow"}.

@@ -1,7 +1,7 @@
 ---
 title: How long should I run the simulation?
 date: 2023-12-03 21:05:09
-enable: true
+enabled: true
 category: "Simulations"
 ---
 The frequency-domain response obtained in the FDTD simulation only accurately represents the continuous-wave response of the system if the fields at the beginning and at the end of the time stepping are (very close to) zero. So, you should run the simulation for a time enough to allow the electromagnetic fields decay to negligible values within the simulation domain.

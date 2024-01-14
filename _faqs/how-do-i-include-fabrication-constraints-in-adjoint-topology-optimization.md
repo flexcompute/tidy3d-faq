@@ -2,13 +2,13 @@
 _schema: default
 title: How do I include fabrication constraints in adjoint topology optimization?
 date: 2023-12-21 23:00:02
-enable: true
+enabled: true
 category: Inverse Design
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

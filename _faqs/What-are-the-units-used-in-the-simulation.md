@@ -1,7 +1,7 @@
 ---
 title: What are the units used in the simulation?
 date: 2023-10-24 14:48:15
-enable: true
+enabled: true
 category: "Simulations"
 ---
 We generally assume the following physical units in component definitions:

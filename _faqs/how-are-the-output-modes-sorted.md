@@ -2,13 +2,13 @@
 _schema: default
 title: How are the output modes sorted?
 date: 2023-12-18 22:11:57
-enable: true
+enabled: true
 category: Mode Solver
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

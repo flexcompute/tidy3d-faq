@@ -1,7 +1,7 @@
 ---
 title: How do I see the version of Tidy3D I am using?
 date: 2023-12-03 11:48:05
-enable: true
+enabled: true
 category: "Installation and Help"
 ---
 <div>In python, after importing <code>tidy3d</code>, run</div>

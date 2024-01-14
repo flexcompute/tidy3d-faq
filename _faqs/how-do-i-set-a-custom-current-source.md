@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set a custom current source?
 date: 2023-12-11 16:01:43
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

@@ -2,13 +2,13 @@
 _schema: default
 title: How do I simulate periodic structures in Tidy3D?
 date: 2023-12-15 21:48:06
-enable: true
+enabled: true
 category: Boundary Conditions
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

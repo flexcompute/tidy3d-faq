@@ -1,7 +1,7 @@
 ---
 title: How do I create a material from n, k values at a given frequency?
 date: 2023-12-05 18:51:47
-enable: true
+enabled: true
 category: "Mediums"
 ---
 To create a material from the real ($n$) and imaginary ($k$) parts of refractive index, use the [tidy3d.Medium.from\_nk()](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Medium.html#tidy3d.Medium.from_nk){: target="_blank" rel="noopener"}. For example:

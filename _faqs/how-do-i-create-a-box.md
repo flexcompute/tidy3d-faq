@@ -1,7 +1,7 @@
 ---
 title: How do I create a box?
 date: 2023-12-06 21:33:15
-enable: true
+enabled: true
 category: "Structures"
 ---
 You can create a box geometry using the&nbsp;[tidy3d.Box](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Box.html#tidy3d-box){: target="_blank" rel="noopener"}&nbsp;object. You can specify the `center` and `size` parameters, as below:

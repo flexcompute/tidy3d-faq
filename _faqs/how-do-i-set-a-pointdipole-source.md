@@ -2,13 +2,13 @@
 _schema: default
 title: How do I set a PointDipole source?
 date: 2023-12-07 15:15:41
-enable: true
+enabled: true
 category: Sources
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

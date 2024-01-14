@@ -2,13 +2,13 @@
 _schema: default
 title: "How do I select the data at a certain coordinate value (i.e.\_x=0.0,\_f=200e12)?"
 date: 2023-12-19 14:35:56
-enable: true
+enabled: true
 category: Data Visualization and Postprocessing
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:

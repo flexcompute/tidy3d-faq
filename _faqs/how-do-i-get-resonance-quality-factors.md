@@ -2,13 +2,13 @@
 _schema: default
 title: How do I get resonance quality factors?
 date: 2023-12-20 18:51:02
-enable: true
+enabled: true
 category: Resonance Finder
 _inputs:
   title:
     type: text
     label: QUESTION TITLE
-  enable:
+  enabled:
     type: switch
     hidden: true
   date:
