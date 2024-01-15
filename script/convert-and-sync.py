@@ -11,9 +11,10 @@ from slugify import slugify
 
 
 class Configure:
+    script_directory = os.path.dirname(os.path.abspath(__file__))
     config = configparser.ConfigParser()
-    config.read('config.ini')
-
+    config_path = os.path.abspath(os.path.join(script_directory, './config.ini'))
+    config.read(config_path)
     algolia_config = {}
     for section in config.sections():
         if section == 'Algolia':
@@ -21,7 +22,7 @@ class Configure:
                 algolia_config[key] = value
 
     # 获取配置项
-    script_directory = os.path.dirname(os.path.abspath(__file__))
+    
     directory = config.get('General', 'compile_directory')
     compile_directory = os.path.abspath(os.path.join(
         script_directory, directory))
@@ -141,7 +142,7 @@ class Convert:
 
     def compare_faq_category(self, faq_path, category):
         absolute_path = os.path.abspath(os.path.join(
-            Configure.script_directory, '../..', faq_path))
+            Configure.script_directory, '../', faq_path))
         if not self.is_file_exists(absolute_path):
             return {
                 'exists': False
@@ -247,9 +248,9 @@ class Convert:
 if __name__ == '__main__':
     convert = Convert()
     convert.compile_md_files()
-    if len(convert.titles) > 0:
-        sync = Sync()
-        sync.upload_faq_suggestion(convert.titles)
+    # if len(convert.titles) > 0:
+    #     sync = Sync()
+    #     sync.upload_faq_suggestion(convert.titles)
     convert.clear_temp_folder()
     convert.filter_faqs()
     # print(convert.faq_categories)

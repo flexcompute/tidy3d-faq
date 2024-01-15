@@ -1,0 +1,6 @@
+configparser
+yaml
+json
+datetime
+algoliasearch
+slugify
