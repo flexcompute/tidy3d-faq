@@ -1,0 +1,37 @@
+name: Compile and commit docs
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["sync-to-marketing-site"] # Name of the workflow to listen for
+    types:
+      - completed
+
+jobs:
+  run-python-and-commit:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }} # Ensure the triggering workflow was successful
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }} # Checkout the branch that triggered the workflow
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x' # Specify the Python version
+
+      - name: Install Python Packages
+        run: pip install PyYAML
+
+      - name: Run Python Script
+        run: python docs/compile_rst_categories.py
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m 'Compile documentation :robot:' || exit 0 # Exit gracefully if no changes
+          git push origin ${{ github.event.workflow_run.head_branch }}
