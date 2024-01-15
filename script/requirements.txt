@@ -1,6 +1,4 @@
 configparser
-yaml
-json
-datetime
+PyYAML
 algoliasearch
-slugify
+python-slugify
