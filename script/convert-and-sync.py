@@ -32,6 +32,7 @@ class Configure:
         script_directory, config.get('General', 'faq_categories')))
     faq_temp_directory = os.path.abspath(os.path.join(
         script_directory, config.get('General', 'faqs_temp_directory')))
+    faq_temp_categories_path = os.path.abspath(os.path.join(script_directory, config.get('General', 'faq_temp_categories')))
     target_img_path = config.get('General', 'target_img_path')
 
 
@@ -245,6 +246,13 @@ class Convert:
             shutil.rmtree(Configure.faq_temp_directory)
         os.mkdir(Configure.faq_temp_directory)
 
+    def generate_category_yml(self):
+        toc_yml = yaml.dump(self.faq_categories)
+
+        with open(Configure.faq_temp_categories_path, 'w') as f:
+            f.write(toc_yml)
+        f.close()
+        pass
 
 if __name__ == '__main__':
     convert = Convert()
@@ -254,10 +262,5 @@ if __name__ == '__main__':
         sync.upload_faq_suggestion(convert.titles)
     convert.clear_temp_folder()
     convert.filter_faqs()
-    # print(convert.faq_categories)
-    # if len(convert.titles) > 0:
-    #     print(convert.titles)
-
-    # print(Configure.algolia_config)
-    # with open('output.json', 'w') as json_file:
-    #     json.dump(convert.titles, json_file, indent=2)
+    if convert.faq_categories:
+        convert.generate_category_yml()
