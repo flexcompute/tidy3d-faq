@@ -241,16 +241,17 @@ class Convert:
             file.close()
 
     def clear_temp_folder(self):
-        shutil.rmtree(Configure.faq_temp_directory)
+        if os.path.exists(Configure.faq_temp_directory):
+            shutil.rmtree(Configure.faq_temp_directory)
         os.mkdir(Configure.faq_temp_directory)
 
 
 if __name__ == '__main__':
     convert = Convert()
     convert.compile_md_files()
-    # if len(convert.titles) > 0:
-    #     sync = Sync()
-    #     sync.upload_faq_suggestion(convert.titles)
+    if len(convert.titles) > 0:
+        sync = Sync()
+        sync.upload_faq_suggestion(convert.titles)
     convert.clear_temp_folder()
     convert.filter_faqs()
     # print(convert.faq_categories)
