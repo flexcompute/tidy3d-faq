@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.sourceBranch }}
+          ref: ${{ env.SOURCE_BRANCH }}
           path: tidy3d-faq
 
       - uses: actions/setup-python@v5
@@ -42,7 +42,7 @@ jobs:
           repository: cmsflexc/flexcompute.com
           token: ${{ secrets.GH_PAT }}
           path: flexcompute.com
-          ref: ${{ inputs.targetBranch }}
+          ref: ${{ env.TARGET_BRANCH }}
 
       - run: |
           cd ${{ github.workspace }}
