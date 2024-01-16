@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SOURCE_BRANCH: ${{ inputs.sourceBranch || 'develop' }}
-      TARGET_BRANCH: ${{ inputs.targetBranch || 'tidy3d-faq' }}
+      TARGET_BRANCH: ${{ inputs.targetBranch || 'develop' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
