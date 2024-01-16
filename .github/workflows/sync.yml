@@ -1,5 +1,8 @@
 name: sync-to-marketing-site
 on:
+  push:
+    branches:
+      - develop
   workflow_dispatch:
     inputs:
       sourceBranch:
@@ -9,26 +12,59 @@ on:
       targetBranch:
         description: target branch
         default: tidy3d-faq
-        required: true 
+        required: true
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      SOURCE_BRANCH: ${{ inputs.sourceBranch || 'develop' }}
+      TARGET_BRANCH: ${{ inputs.targetBranch || 'tidy3d-faq' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ inputs.sourceBranch }}
+          path: tidy3d-faq
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: 18
-          cache: 'npm'
+          python-version: '3.10'
 
-      - uses: JamesIves/github-pages-deploy-action@v4
+      - run: |
+          cd ${{ github.workspace }}/tidy3d-faq
+          pip install -r script/requirements.txt
+          python script/convert-and-sync.py
+
+      - name: Checkout flexcompute.com
+        uses: actions/checkout@v4
         with:
-          folder: placeholder
+          repository: cmsflexc/flexcompute.com
           token: ${{ secrets.GH_PAT }}
-          repository-name: cmsflexc/flexcompute.com
-          target-folder: notebooks
-          branch: ${{ inputs.targetBranch }} 
+          path: flexcompute.com
+          ref: ${{ inputs.targetBranch }}
+
+      - run: |
+          cd ${{ github.workspace }}
+          [ ! -d "${{ github.workspace }}/flexcompute.com/assets/tidy3d/faqs" ] && mkdir -p ${{ github.workspace }}/flexcompute.com/assets/tidy3d/faqs
+          [ ! -d "${{ github.workspace }}/flexcompute.com/_data/tidy3d_faqs" ] && mkdir -p ${{ github.workspace }}/flexcompute.com/_data/tidy3d_faqs
+          rsync -r ${{ github.workspace }}/tidy3d-faq/temp/ ${{ github.workspace }}/flexcompute.com/_faqs
+          rsync -r ${{ github.workspace }}/tidy3d-faq/_faqs/img/ ${{ github.workspace }}/flexcompute.com/assets/tidy3d/faqs
+          rsync ${{ github.workspace }}/tidy3d-faq/faq_categories.yml ${{ github.workspace }}/flexcompute.com/_data/tidy3d_faqs/faq_categories.yml
+
+      - run: |
+          ls -la ${{ github.workspace }}/flexcompute.com/_faqs
+          ls -la ${{ github.workspace }}/flexcompute.com/assets/tidy3d/faqs
+          ls -la ${{ github.workspace }}/flexcompute.com/_data/tidy3d_faqs
+
+      - name: Commit change to target repo
+        shell: bash
+        working-directory: ${{ github.workspace }}/flexcompute.com
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          git config --global user.email "github_auto@flexcompute.com"
+          git config --global user.name "github_auto"
+          git add .
+          git commit -m "sync(): sync from tidy3d-faq"
+          git push
