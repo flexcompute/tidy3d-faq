@@ -150,14 +150,16 @@ class Convert:
             }
         faq_category = ''
         faq_content = None
+        enabled = False
         with open(absolute_path, 'r', encoding='utf-8') as file:
             faq_content = file.read()
             dict = self.extract_content_between_dashed(faq_content)
             front_matter = dict['front_matter']
             faq_category = front_matter.get('category')
+            enabled = front_matter.get('enabled')
         file.close()
         return {
-            'exists': category == faq_category,
+            'exists': category == faq_category and enabled,
             'content': faq_content
         }
 
