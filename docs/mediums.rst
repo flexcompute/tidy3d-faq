@@ -13,6 +13,7 @@ Mediums
    faq/how-do-i-create-an-anisotropic-material
    faq/how-do-i-create-an-active-material
    faq/how-do-i-create-a-spatially-varying-material
+   faq/how-do-i-export-a-spatially-varying-medium-dataset-to-hdf5
    faq/how-do-i-load-a-commonly-used-dispersive-material
    faq/how-can-i-define-a-2d-material
    faq/how-can-i-define-graphene
