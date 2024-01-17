@@ -82,6 +82,7 @@
       "_faqs/how-do-i-create-an-anisotropic-material.md",
       "_faqs/how-do-i-create-an-active-material.md",
       "_faqs/how-do-i-create-a-spatially-varying-material.md",
+      "_faqs/how-do-i-export-a-spatially-varying-medium-dataset-to-hdf5.md",
       "_faqs/how-do-i-load-a-commonly-used-dispersive-material.md",
       "_faqs/how-can-i-define-a-2d-material.md",
       "_faqs/how-can-i-define-graphene.md",
