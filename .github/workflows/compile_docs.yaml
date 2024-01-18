@@ -2,10 +2,11 @@ name: Compile and commit docs
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ["sync-to-marketing-site"] # Name of the workflow to listen for
-    types:
-      - completed
+  push:
+    branches:
+      - develop
+    paths:
+      - '_faq/**'
 
 jobs:
   run-python-and-commit:
