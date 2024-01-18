@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - develop
+    paths:
+      - '_faq/**'
   workflow_dispatch:
     inputs:
       sourceBranch:
