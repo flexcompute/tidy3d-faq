@@ -3,8 +3,8 @@
     "category": "About Tidy3D",
     "id": "about-tidy3d",
     "faqs": [
-      "_faqs/what-is-tidy3d.md",
       "_faqs/How-is-using-Tidy3D-billed.md",
+      "_faqs/what-is-tidy3d.md",
       "_faqs/can-i-get-a-discount-as-a-student-or-teacher.md",
       "_faqs/what-are-the-advantages-of-tidy3d-compared-to-traditional-em-simulators.md",
       "_faqs/do-i-have-to-know-python-programming-to-use-tidy3d.md",
