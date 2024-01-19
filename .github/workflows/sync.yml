@@ -4,7 +4,9 @@ on:
     branches:
       - develop
     paths:
-      - '_faq/**'
+      - '_faqs/**'
+      - 'faq_categories.json'
+
   workflow_dispatch:
     inputs:
       sourceBranch:

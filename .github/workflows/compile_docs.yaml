@@ -6,7 +6,8 @@ on:
     branches:
       - develop
     paths:
-      - '_faq/**'
+      - '_faqs/**'
+      - 'faq_categories.json'
 
 jobs:
   run-python-and-commit:
