@@ -5,7 +5,7 @@
 | 2023-12-20 18:30:12 | Scattering Matrix |
 
 
-You can specify mappings between scattering matrix elements that you want to be equal up to a multiplicative factor. You can define these as `element_mappings` in the [tidy3d.plugins.smatrix.ComponentModeler](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.plugins.smatrix.ComponentModeler.html).
+You can specify mappings between scattering matrix elements that you want to be equal up to a multiplicative factor. You can define these as `element_mappings` in the [tidy3d.plugins.smatrix.ComponentModeler](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.smatrix.ComponentModeler.html).
 
 "Indices" are defined as a tuple of `(port_name: str, mode_index: int)`
 

@@ -5,7 +5,7 @@
 | 2023-12-14 20:30:51 | Boundary Conditions |
 
 
-You should use [tidy3d.PMCBoundary](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.PMCBoundary.html#tidy3d.PMCBoundary) to enclose the simulation domain using perfect magnetic conductors. For example:
+You should use [tidy3d.PMCBoundary](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.PMCBoundary.html#tidy3d.PMCBoundary) to enclose the simulation domain using perfect magnetic conductors. For example:
 
 
 

@@ -5,7 +5,7 @@
 | 2023-12-18 11:05:43 | Mode Solver |
 
 
-Use the Tidy3D <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a> to perform optical mode analysis and obtain information such as mode effective index (real and imaginary parts), group index, effective area, polarization fraction, and field distribution. To illustrate how to set up a mode solver, let's consider the case of a silicon-on-insulator (SOI) waveguide operating at 1.55 $\mu$m.
+Use the Tidy3D <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a> to perform optical mode analysis and obtain information such as mode effective index (real and imaginary parts), group index, effective area, polarization fraction, and field distribution. To illustrate how to set up a mode solver, let's consider the case of a silicon-on-insulator (SOI) waveguide operating at 1.55 $\mu$m.
 
  
 
@@ -32,7 +32,7 @@ sim = tidy3d.Simulation(
 
 
 
-You can use a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Box.html#tidy3d.Box">Box</a> object to define the plane where you want to solve the modes. We use a plane perpendicular to the waveguide propagation axis in this example. Symmetries are applied if they are defined in the simulation and the mode plane center sits on the simulation center. Then, use the <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.ModeSpec.html#tidy3d.ModeSpec">tidy3d.ModeSpec</a> object to specify the number of modes (<code>num_modes</code>), the initial effective index guess (<code>target_neff</code>), polarization, and other characteristics of the modes you are looking for. Make <code>group_index_step=True</code> to enable mode group index calculation.
+You can use a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Box.html#tidy3d.Box">Box</a> object to define the plane where you want to solve the modes. We use a plane perpendicular to the waveguide propagation axis in this example. Symmetries are applied if they are defined in the simulation and the mode plane center sits on the simulation center. Then, use the <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ModeSpec.html#tidy3d.ModeSpec">tidy3d.ModeSpec</a> object to specify the number of modes (<code>num_modes</code>), the initial effective index guess (<code>target_neff</code>), polarization, and other characteristics of the modes you are looking for. Make <code>group_index_step=True</code> to enable mode group index calculation.
 
 ```python
 
@@ -48,7 +48,7 @@ mode_spec = tidy3d.ModeSpec(
 
 ```
 
-Now you can create and execute the mode solver, which returns the results in a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.plugins.mode.ModeSolverData.html#tidy3d.plugins.mode.ModeSolverData">ModeSolverData</a> object. For more details on how to set up, run and visualize the solver results, please refer to this <a href="https://www.flexcompute.com/tidy3d/examples/notebooks/ModeSolver/">notebook</a>.
+Now you can create and execute the mode solver, which returns the results in a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolverData.html#tidy3d.plugins.mode.ModeSolverData">ModeSolverData</a> object. For more details on how to set up, run and visualize the solver results, please refer to this <a href="https://www.flexcompute.com/tidy3d/examples/notebooks/ModeSolver/">notebook</a>.
 
 ```python
 from tidy3d.plugins.mode import ModeSolver

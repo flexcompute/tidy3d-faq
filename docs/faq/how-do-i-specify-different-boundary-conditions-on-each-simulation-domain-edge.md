@@ -5,7 +5,7 @@
 | 2023-12-15 21:23:27 | Boundary Conditions |
 
 
-Use <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.BoundarySpec.html#tidy3d.BoundarySpec">tidy3d.BoundarySpec</a> to specify different boundary conditions to simulation edges. For example: 
+Use <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.BoundarySpec.html#tidy3d.BoundarySpec">tidy3d.BoundarySpec</a> to specify different boundary conditions to simulation edges. For example: 
 
 ```python
 

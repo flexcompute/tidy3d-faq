@@ -5,7 +5,7 @@
 | 2023-12-18 17:27:21 | Mode Solver |
 
 
-You can run the local version of <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a> through the <code>.solve()</code> method. For example:
+You can run the local version of <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a> through the <code>.solve()</code> method. For example:
 
  
 

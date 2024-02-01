@@ -25,4 +25,4 @@ monitor = FieldProjectionAngleMonitor(
 
 
 
-For details, please refer to the [API reference](https://docs.flexcompute.com/projects/tidy3d/en/stable/_autosummary/tidy3d.FieldProjectionAngleMonitor.html).
+For details, please refer to the [API reference](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.FieldProjectionAngleMonitor.html).

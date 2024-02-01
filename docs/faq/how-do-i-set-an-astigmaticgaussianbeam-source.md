@@ -5,7 +5,7 @@
 | 2023-12-11 15:07:45 | Sources |
 
 
-The [tidy3d.AstigmaticGaussianBeam](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.AstigmaticGaussianBeam.html) class implements the simple astigmatic Gaussian beam described in `Kochkina et al., Applied Optics, vol. 52, issue 24, (2013)`. The simple astigmatic Guassian distribution allows both an elliptical intensity profile and different waist locations for the two principal axes of the ellipse. The following example illustrates how to set up a [tidy3d.AstigmaticGaussianBeam](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.AstigmaticGaussianBeam.html).
+The [tidy3d.AstigmaticGaussianBeam](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.AstigmaticGaussianBeam.html) class implements the simple astigmatic Gaussian beam described in `Kochkina et al., Applied Optics, vol. 52, issue 24, (2013)`. The simple astigmatic Guassian distribution allows both an elliptical intensity profile and different waist locations for the two principal axes of the ellipse. The following example illustrates how to set up a [tidy3d.AstigmaticGaussianBeam](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.AstigmaticGaussianBeam.html).
 
 
 
@@ -32,4 +32,4 @@ gauss_source = tidy3d.AstigmaticGaussianBeam(
 
 
 
-Use the `center` and `size` parameters to set the source position and dimension, then adjust the `source_time` dependence using [tidy3d.GaussianPulse](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.GaussianPulse.html). The `direction` parameter specifies propagation in the positive or negative direction of the injection axis. You can change the light polarization using `pol_angle`, and  adjust the propagation axis direction with `angle_theta` and `angle_phi`to control the polar and azimuth angles. In this example, different `waist_sizes` and `waist_distances` were specified in the `x-` and `y-`directions.
+Use the `center` and `size` parameters to set the source position and dimension, then adjust the `source_time` dependence using [tidy3d.GaussianPulse](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.GaussianPulse.html). The `direction` parameter specifies propagation in the positive or negative direction of the injection axis. You can change the light polarization using `pol_angle`, and  adjust the propagation axis direction with `angle_theta` and `angle_phi`to control the polar and azimuth angles. In this example, different `waist_sizes` and `waist_distances` were specified in the `x-` and `y-`directions.
