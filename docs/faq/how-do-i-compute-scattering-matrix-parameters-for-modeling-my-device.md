@@ -5,7 +5,7 @@
 | 2023-12-20 16:57:31 | Scattering Matrix |
 
 
-To compute scattering matrix parameters you need to create a base [tidy3d.Simulation](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Simulation.html) (without the modal sources or monitors used to compute S-parameters) and include [tidy3d.plugins.smatrix.Port](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.plugins.smatrix.Port.html) objects. These ports will be converted into modal sources  and monitors later, so they require both some mode specification and a definition of the direction that points into the system. You should also give them names to refer to later. For example:
+To compute scattering matrix parameters you need to create a base [tidy3d.Simulation](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Simulation.html) (without the modal sources or monitors used to compute S-parameters) and include [tidy3d.plugins.smatrix.Port](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.smatrix.Port.html) objects. These ports will be converted into modal sources  and monitors later, so they require both some mode specification and a definition of the direction that points into the system. You should also give them names to refer to later. For example:
 
 
 
@@ -29,7 +29,7 @@ port_right_top = Port(
 
 
 
-Next, add the base simulation and ports to the [tidy3d.plugins.smatrix.ComponentModeler](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.plugins.smatrix.ComponentModeler.html), along with the frequency of interest and a name for saving the batch of simulations that will get created later.
+Next, add the base simulation and ports to the [tidy3d.plugins.smatrix.ComponentModeler](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.smatrix.ComponentModeler.html), along with the frequency of interest and a name for saving the batch of simulations that will get created later.
 
 
 

@@ -5,7 +5,7 @@
 | 2023-12-06 22:15:15 | Structures |
 
 
-A geometry group is a convenient way to gather multiple geometry objects into one collection. It can significantly improve performance when all the geometries in the group are assigned to the same medium. To create a geometry group, use the [tidy3d.GeometryGroup](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.GeometryGroup.html) object and set the `geometries` parameter as below:
+A geometry group is a convenient way to gather multiple geometry objects into one collection. It can significantly improve performance when all the geometries in the group are assigned to the same medium. To create a geometry group, use the [tidy3d.GeometryGroup](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.GeometryGroup.html) object and set the `geometries` parameter as below:
 
 
 

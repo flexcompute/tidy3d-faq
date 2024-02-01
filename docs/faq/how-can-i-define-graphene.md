@@ -5,7 +5,7 @@
 | 2023-12-05 20:22:01 | Mediums |
 
 
-You can create a graphene medium using [tidy3d.Graphene](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Graphene.html#tidy3d.Graphene), which defines a parametric surface conductivity model for graphene. For example:
+You can create a graphene medium using [tidy3d.Graphene](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Graphene.html#tidy3d.Graphene), which defines a parametric surface conductivity model for graphene. For example:
 
 
 

@@ -5,7 +5,7 @@
 | 2023-12-19 16:28:19 | Data Visualization and Postprocessing |
 
 
-You can use the [plot\_field()](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.SimulationData.html#tidy3d.SimulationData.plot_field) function to plot the structure on top of the simulated fields. For example:
+You can use the [plot\_field()](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SimulationData.html#tidy3d.SimulationData.plot_field) function to plot the structure on top of the simulated fields. For example:
 
 
 

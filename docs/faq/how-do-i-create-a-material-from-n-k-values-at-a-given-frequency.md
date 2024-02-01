@@ -5,7 +5,7 @@
 | 2023-12-05 18:51:47 | Mediums |
 
 
-To create a material from the real ($n$) and imaginary ($k$) parts of refractive index, use the [tidy3d.Medium.from\_nk()](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.Medium.html#tidy3d.Medium.from_nk). For example:
+To create a material from the real ($n$) and imaginary ($k$) parts of refractive index, use the [tidy3d.Medium.from\_nk()](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Medium.html#tidy3d.Medium.from_nk). For example:
 
 
 

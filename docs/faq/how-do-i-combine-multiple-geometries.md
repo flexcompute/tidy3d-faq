@@ -5,7 +5,7 @@
 | 2023-12-06 22:35:41 | Structures |
 
 
-You can combine multiple geometries using the [tidy3d.ClipOperation](https://docs.flexcompute.com/projects/tidy3d/en/latest/_autosummary/tidy3d.ClipOperation.html) object to perform *'union'*, *'intersection'*, *'difference'*, and *'symmetric\_difference'*  operations. For example:
+You can combine multiple geometries using the [tidy3d.ClipOperation](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ClipOperation.html) object to perform *'union'*, *'intersection'*, *'difference'*, and *'symmetric\_difference'*  operations. For example:
 
 
 
