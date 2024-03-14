@@ -1,6 +1,6 @@
 ---
 _schema: default
-title: How do I get resonance quality factors?
+title: How to Ensure the Calculated Quality Factor is Accurate?
 date: 2023-12-20 18:51:02
 enabled: true
 category: Resonance Finder
