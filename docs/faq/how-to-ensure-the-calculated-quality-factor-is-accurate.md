@@ -1,4 +1,4 @@
-# How do I get resonance quality factors?
+# How to Ensure the Calculated Quality Factor is Accurate?
 
 | Date       | Category    |
 |------------|-------------|
