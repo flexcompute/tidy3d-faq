@@ -25,4 +25,4 @@ _inputs:
           - key: category_name
 ---
 
-At the moment, Tidy3D does not support continuous and discrete rotational symmetries. Only mirror symmetries are supported. For more information on using symmetry to significantly reduce simulation time and cost, please refer to the tutorial [[Defining and using](https://www.flexcompute.com/tidy3d/examples/notebooks/Symmetry/) symmetries](https://www.flexcompute.com/tidy3d/examples/notebooks/Symmetry/) tutorial.
+At the moment, Tidy3D does not support continuous and discrete rotational symmetries. Only mirror symmetries are supported. For more information on using symmetry to significantly reduce simulation time and cost, please refer to the tutorial [Defining and using symmetries](https://www.flexcompute.com/tidy3d/examples/notebooks/Symmetry/) tutorial.
