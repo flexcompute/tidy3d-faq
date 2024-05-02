@@ -28,6 +28,7 @@
     "category": "Simulations",
     "id": "simulations",
     "faqs": [
+      "_faqs/Can-you-convert-a-lumerical-script-file-to-Tidy3D.md",
       "_faqs/How-do-I-run-a-simulation-and-access-the-results.md",
       "_faqs/how-to-submit-a-simulation-in-python-to-the-server.md",
       "_faqs/how-do-i-upload-a-job-to-the-web-without-running-it-so-i-can-inspect-it-first.md",
