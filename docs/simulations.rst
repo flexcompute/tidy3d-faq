@@ -4,7 +4,6 @@ Simulations
 .. toctree::
    :maxdepth: 2
 
-   faq/Can-you-convert-a-lumerical-script-file-to-Tidy3D
    faq/How-do-I-run-a-simulation-and-access-the-results
    faq/how-to-submit-a-simulation-in-python-to-the-server
    faq/how-do-i-upload-a-job-to-the-web-without-running-it-so-i-can-inspect-it-first
@@ -23,3 +22,4 @@ Simulations
    faq/how-to-run-a-2d-simulation-in-tidy3d
    faq/why-the-simulation-time-for-the-exact-same-simulation-can-vary
    faq/how-long-should-i-run-the-simulation
+   faq/Can-you-convert-a-lumerical-script-file-to-Tidy3D
