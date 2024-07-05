@@ -41,9 +41,16 @@ Source power normalization is applied depending on the source type. In the cases
 
 The injected power values described below assume that the source spectrum normalization has also been applied.
 
--   [PointDipole](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.PointDipole.html#tidy3d.PointDipole){: .color-primary-hover}: Normalization is such that the power injected by the source in a homogeneous material of refractive index $n$ at frequency $\omega = 2\pi f$ is given by
+-   [PointDipole](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.PointDipole.html#tidy3d.PointDipole){: .color-primary-hover}: The point dipole source represents an infinitesimal antenna with a fixed current density. The normalization is such that the power injected by the source in a homogeneous material of refractive index $n$ at frequency $\omega = 2\pi f$ is approximately given as follows
 
-    $$\frac{\omega^2}{12\pi}\frac{\mu_0 n}{c}.$$
+    * $\frac{\omega^2}{12\pi}\frac{\mu_0 n}{c}$, 3D simulation, electric current
+    * $\frac{\omega^2}{12\pi}\frac{\epsilon_0 n^3}{c}$, 3D simulation, magnetic current
+    * $\frac{\omega \mu_0}{16}$, 2D TE simulation, electric current
+    * $\frac{\omega \mu_0}{8}$, 2D TM simulation, electric current
+    * $\frac{\omega \epsilon_0 n^2}{8}$, 2D TE simulation, magnetic current
+    * $\frac{\omega \epsilon_0 n^2}{16}$, 2D TM simulation, magnetic current
+
+    There can be a small difference in the true power compared to the analytical values above due to the finite grid. Note that the current source definition used in Tidy3D is different from the definition of an electric dipole composed of two separated, oscillating electric charges, which is also common. The power normalization differs by a factor of $\omega^2$ for electric dipoles, and $\mu_0^2 \omega^2$ for magnetic dipoles.
 
 -   [UniformCurrentSource](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.UniformCurrentSource.html#tidy3d.UniformCurrentSource){: .color-primary-hover}: No extra normalization applied.
 
