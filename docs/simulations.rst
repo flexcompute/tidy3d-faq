@@ -4,7 +4,7 @@ Simulations
 .. toctree::
    :maxdepth: 2
 
-   faq/How-do-I-run-a-simulation-and-access-the-results.md
+   faq/how-do-i-run-a-simulation-and-access-the-results.md
    faq/how-to-submit-a-simulation-in-python-to-the-server.md
    faq/how-do-i-upload-a-job-to-the-web-without-running-it-so-i-can-inspect-it-first.md
    faq/how-do-i-monitor-the-progress-of-a-simulation.md
@@ -18,8 +18,8 @@ Simulations
    faq/how-do-i-see-the-cost-of-my-simulation.md
    faq/how-can-i-optimize-the-simulation-cost.md
    faq/how-do-i-print-the-task-log-file.md
-   faq/What-are-the-units-used-in-the-simulation.md
+   faq/what-are-the-units-used-in-the-simulation.md
    faq/how-to-run-a-2d-simulation-in-tidy3d.md
    faq/why-the-simulation-time-for-the-exact-same-simulation-can-vary.md
    faq/how-long-should-i-run-the-simulation.md
-   faq/Can-you-convert-a-lumerical-script-file-to-Tidy3D.md
+   faq/can-you-convert-a-lumerical-script-file-to-tidy3d.md

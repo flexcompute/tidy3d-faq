@@ -8,7 +8,7 @@ Sources
    faq/how-do-i-set-the-source-frequency-and-bandwidth.md
    faq/how-can-i-plot-the-source-spectrum-and-time-dependence.md
    faq/how-can-i-plot-the-source-spectrum.md
-   faq/How-are-results-normalized.md
+   faq/how-are-results-normalized.md
    faq/how-do-i-set-a-pointdipole-source.md
    faq/how-do-i-calculate-the-power-radiated-by-a-pointdipole-source.md
    faq/how-do-i-set-a-uniformcurrentsource-source.md

@@ -4,7 +4,7 @@ Mediums
 .. toctree::
    :maxdepth: 2
 
-   faq/How-do-I-include-material-dispersion.md
+   faq/how-do-i-include-material-dispersion.md
    faq/can-i-import-my-own-tabulated-material-data.md
    faq/how-do-i-create-a-lossy-material-with-a-conductivity.md
    faq/how-do-i-create-a-material-from-n-k-values-at-a-given-frequency.md

@@ -4,7 +4,7 @@ About Tidy3D
 .. toctree::
    :maxdepth: 2
 
-   faq/How-is-using-Tidy3D-billed.md
+   faq/how-is-using-tidy3d-billed.md
    faq/what-is-tidy3d.md
    faq/can-i-get-a-discount-as-a-student-or-teacher.md
    faq/what-are-the-advantages-of-tidy3d-compared-to-traditional-em-simulators.md
