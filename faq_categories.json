@@ -3,7 +3,7 @@
     "category": "About Tidy3D",
     "id": "about-tidy3d",
     "faqs": [
-      "_faqs/How-is-using-Tidy3D-billed.md",
+      "_faqs/how-is-using-tidy3d-billed.md",
       "_faqs/what-is-tidy3d.md",
       "_faqs/can-i-get-a-discount-as-a-student-or-teacher.md",
       "_faqs/what-are-the-advantages-of-tidy3d-compared-to-traditional-em-simulators.md",
@@ -28,7 +28,7 @@
     "category": "Simulations",
     "id": "simulations",
     "faqs": [
-      "_faqs/How-do-I-run-a-simulation-and-access-the-results.md",
+      "_faqs/how-do-i-run-a-simulation-and-access-the-results.md",
       "_faqs/how-to-submit-a-simulation-in-python-to-the-server.md",
       "_faqs/how-do-i-upload-a-job-to-the-web-without-running-it-so-i-can-inspect-it-first.md",
       "_faqs/how-do-i-monitor-the-progress-of-a-simulation.md",
@@ -42,11 +42,11 @@
       "_faqs/how-do-i-see-the-cost-of-my-simulation.md",
       "_faqs/how-can-i-optimize-the-simulation-cost.md",
       "_faqs/how-do-i-print-the-task-log-file.md",
-      "_faqs/What-are-the-units-used-in-the-simulation.md",
+      "_faqs/what-are-the-units-used-in-the-simulation.md",
       "_faqs/how-to-run-a-2d-simulation-in-tidy3d.md",
       "_faqs/why-the-simulation-time-for-the-exact-same-simulation-can-vary.md",
       "_faqs/how-long-should-i-run-the-simulation.md",
-      "_faqs/Can-you-convert-a-lumerical-script-file-to-Tidy3D.md"
+      "_faqs/can-you-convert-a-lumerical-script-file-to-tidy3d.md"
     ]
   },
   {
@@ -64,19 +64,19 @@
     "category": "Simulation Troubleshoot",
     "id": "simulation-troubleshoot",
     "faqs": [
-      "_faqs/Why-is-a-simulation-diverging.md",
+      "_faqs/why-is-a-simulation-diverging.md",
       "_faqs/how-can-i-troubleshoot-a-diverged-fdtd-simulation.md",
-      "_faqs/Why-did-my-simulation-finish-early.md",
-      "_faqs/Should-I-make-sure-that-fields-have-fully-decayed-by-the-end-of-the-simulation.md",
+      "_faqs/why-did-my-simulation-finish-early.md",
+      "_faqs/should-i-make-sure-that-fields-have-fully-decayed-by-the-end-of-the-simulation.md",
       "_faqs/can-i-have-structures-larger-than-the-simulation-domain.md",
-      "_faqs/Why-can-I-not-change-Tidy3D-instances-after-they-are-created.md"
+      "_faqs/why-can-i-not-change-tidy3d-instances-after-they-are-created.md"
     ]
   },
   {
     "category": "Mediums",
     "id": "mediums",
     "faqs": [
-      "_faqs/How-do-I-include-material-dispersion.md",
+      "_faqs/how-do-i-include-material-dispersion.md",
       "_faqs/can-i-import-my-own-tabulated-material-data.md",
       "_faqs/how-do-i-create-a-lossy-material-with-a-conductivity.md",
       "_faqs/how-do-i-create-a-material-from-n-k-values-at-a-given-frequency.md",
@@ -125,7 +125,7 @@
       "_faqs/how-do-i-set-the-source-frequency-and-bandwidth.md",
       "_faqs/how-can-i-plot-the-source-spectrum-and-time-dependence.md",
       "_faqs/how-can-i-plot-the-source-spectrum.md",
-      "_faqs/How-are-results-normalized.md",
+      "_faqs/how-are-results-normalized.md",
       "_faqs/how-do-i-set-a-pointdipole-source.md",
       "_faqs/how-do-i-calculate-the-power-radiated-by-a-pointdipole-source.md",
       "_faqs/how-do-i-set-a-uniformcurrentsource-source.md",
@@ -148,7 +148,7 @@
     "category": "Grid Specification",
     "id": "grid-specification",
     "faqs": [
-      "_faqs/What-do-I-need-to-know-about-the-numerical-grid.md",
+      "_faqs/what-do-i-need-to-know-about-the-numerical-grid.md",
       "_faqs/how-fine-of-a-grid-or-mesh-does-my-simulation-need-how-to-choose-grid-spec.md",
       "_faqs/how-to-use-the-automatic-nonuniform-meshing-what-steps-per-wavelength-will-be-sufficient.md",
       "_faqs/how-can-i-create-a-uniform-grid.md",
