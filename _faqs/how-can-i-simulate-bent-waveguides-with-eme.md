@@ -1,6 +1,6 @@
 ---
-title: How can I simulate bent waveugides with EME?
-date: 2025-05-27 18:52:21
+title: How can I simulate bent waveguides with EME?
+date: 2025-05-27 18:52:22
 enabled: true
 category: "EME"
 ---
