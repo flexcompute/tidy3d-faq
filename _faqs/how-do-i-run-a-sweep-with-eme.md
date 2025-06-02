@@ -8,4 +8,4 @@ For **length sweeps**, it is convenient to use a [`tidy3d.EMELengthSweep`](https
 
 For **frequency sweeps**, it is sufficient to provide a list of frequencies to the `freqs` parameter of the [`tidy3d.EMESimulation`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.EMESimulation.html){: target="_blank" rel="noopener"} object.
 
-
+It is also possible to perform a sweep over the number of periods in a periodic structure using the `tidy3d.EMEPeriodicitySweep` object, as demonstrated in [this example](https://docs.flexcompute.com/projects/tidy3d/en/latest/notebooks/PCMBraggGratingFilter.html){: target="_blank" rel="noopener"}.
