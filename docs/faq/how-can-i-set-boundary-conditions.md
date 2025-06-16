@@ -2,15 +2,15 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-06-13 19:29:15 | "Heat" |
+| 2025-06-16 16:19:01 | "Heat" |
 
 
-Boundary conditions for heat simulations are defined using the [HeatBoundarySpec](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatBoundarySpec.html){: .color-primary-hover} class, which has two required fields: `condition` and `placement`.
+Boundary conditions for heat simulations are defined using the [HeatChargeBoundarySpec](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeBoundarySpec.html){: .color-primary-hover} class, which has two required fields: `condition` and `placement`.
 
 - **`condition`**: Specifies the boundary condition to impose. It accepts one of the following types:
-      - [TemperatureBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.TemperatureBC.html#tidy3d.TemperatureBC){: .color-primary-hover}
-      - [HeatFluxBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatFluxBC.html#tidy3d.HeatFluxBC){: .color-primary-hover}
-      - [ConvectionBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ConvectionBC.html#tidy3d.ConvectionBC){: .color-primary-hover}
+      - [TemperatureBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.TemperatureBC.html){: .color-primary-hover}
+      - [HeatFluxBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatFluxBC.html){: .color-primary-hover}
+      - [ConvectionBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ConvectionBC.html){: .color-primary-hover}
 
 - **`placement`**: Specifies where the boundary condition should be applied. Available options include:
 
