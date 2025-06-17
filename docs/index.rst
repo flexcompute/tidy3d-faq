@@ -7,7 +7,9 @@ FAQ |:mag_right:|
    about-tidy3d
    boundary-conditions
    data-visualization-and-postprocessing
+   eme
    grid-specification
+   heat
    installation-and-help
    inverse-design
    mediums

@@ -1,4 +1,4 @@
----  
+---
 title: Which Types of Boundary Conditions are Available?  
 date: 2025-06-13 11:47:10  
 enabled: true  

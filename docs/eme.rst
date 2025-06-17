@@ -1,9 +1,8 @@
 EME
-=======
+===
 
 .. toctree::
    :maxdepth: 2
-
 
    faq/how-do-i-run-a-sweep-with-eme.md
    faq/how-to-define-the-number-of-modes-for-an-eme-simulation.md
