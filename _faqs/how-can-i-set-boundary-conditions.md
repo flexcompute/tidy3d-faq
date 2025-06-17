@@ -1,6 +1,6 @@
 ---
 title: How Can I Set Boundary Conditions?
-date: 2025-06-16 16:19:01
+date: 2025-06-17 15:50:52
 enabled: true
 category: "Heat"
 ---
