@@ -7,7 +7,6 @@ Inverse Design
    faq/what-is-adjoint-simulation.md
    faq/how-many-simulations-are-performed-in-adjoint-calculations.md
    faq/how-is-the-adjoint-simulation-billed.md
-   faq/how-to-install-jax.md
    faq/how-do-i-set-an-inverse-design-problem.md
    faq/what-are-the-differences-between-adjoint-shape-topology-and-level-set-optimizations.md
    faq/how-do-i-set-an-adjoint-shape-optimization.md
