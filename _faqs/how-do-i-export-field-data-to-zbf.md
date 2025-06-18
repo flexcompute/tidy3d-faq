@@ -26,7 +26,7 @@ _inputs:
 ---
 To export planar field monitor data to a Zemax beam file (.zbf), you can use&nbsp;`mon_data.to_zbf()`. For example:
 
-<div><div markdown class="code-snippet">{% highlight python %}
+```python
 
 # Run the simulation and get the data.
 sim_data = tidy3d.web.run(simulation, task_name="task", path="data/data.hdf5", verbose=True)
@@ -37,6 +37,6 @@ ex, ey = sim_data['field_monitor'].to_zbf(
     background_refractive_index=1.0,
 )
 
-{% endhighlight %}
+```
 
 Detailed documentation can be found: &nbsp;[here](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.components.data.monitor_data.ElectromagneticFieldData.html#tidy3d.components.data.monitor_data.ElectromagneticFieldData.to_zbf)
