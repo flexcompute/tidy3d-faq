@@ -253,7 +253,8 @@
       "_faqs/how-do-i-get-a-specific-field-component-from-a-fieldmonitor-or-fieldtimemonitor.md",
       "_faqs/how-do-i-plot-the-monitor-data-as-a-function-of-one-of-its-coordinates.md",
       "_faqs/how-do-i-plot-the-simulation-structure-on-top-of-my-field-plot.md",
-      "_faqs/how-do-i-project-electromagnetic-near-field-data-to-the-far-field.md"
+      "_faqs/how-do-i-project-electromagnetic-near-field-data-to-the-far-field.md",
+      "_faqs/how-do-i-export-field-data-to-zbf.md"
     ]
   },
   {
