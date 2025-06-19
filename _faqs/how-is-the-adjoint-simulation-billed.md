@@ -31,13 +31,13 @@ The number of adjoint simulations — and thus the billing — depends on the mo
 - **Single-frequency differentiation**:  
   If all monitors are configured to differentiate at a single frequency, only one adjoint simulation is needed per forward simulation, regardless of how many monitors are present. This is possible because the adjoint sources can be combined via linear superposition.
 
-- **Monitors with well-defined field profiles** (e.g., `mode` or `directivity` calculations):  
+- **Monitors with well-defined field profiles** (e.g., [ModeMonitor](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ModeMonitor.html){: .color-primary-hover} or [DiffractionMonitor](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.DiffractionMonitor.html){: .color-primary-hover})  
   - If differentiating with respect to a single monitor, only one adjoint simulation is needed per forward simulation — even for broadband frequencies.  
   - If multiple broadband monitors are used, multiple adjoint simulations may be required. The adjoint plugin automatically chooses the most efficient strategy:
     - Group monitors with a single frequency into one adjoint simulation (single-frequency case), or  
     - Run one simulation per monitor including all frequencies (broadband case).
 
-- **Monitors with arbitrary field profiles** (e.g., `field` monitors):  
+- **Monitors with arbitrary field profiles** (e.g., [FieldMonitor](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.FieldMonitor.html){: .color-primary-hover})   
   - These do not support broadband adjoint sources, so one adjoint simulation is required per frequency.  
   - Multiple field monitors with the same frequency can still be grouped into a single adjoint simulation.
 
@@ -48,8 +48,8 @@ Below is a table summarizing how the number of adjoint simulations depends on th
 | Monitor Type            | Frequencies           | # of Monitors       | # of Adjoint Simulations                    |
 |-------------------------|------------------------|----------------------|---------------------------------------------|
 | Any                     | Single                | Any                  | 1 per forward simulation                    |
-| Mode / Directivity      | Multiple              | 1                    | 1 per forward simulation                    |
-| Mode / Directivity      | Multiple              | >1                   | Depends (≤ #monitors or ≤ #frequencies)     |
+| Mode / Diffraction      | Multiple              | 1                    | 1 per forward simulation                    |
+| Mode / Diffraction      | Multiple              | >1                   | Depends (≤ #monitors or ≤ #frequencies)     |
 | Field (arbitrary)       | Single                | Any (same freq)      | 1                                           |
 | Field (arbitrary)       | Multiple              | 1                    | = # of frequencies                          |
 | Field (arbitrary)       | Multiple              | >1 (mixed freqs)     | = # of unique frequencies                   |

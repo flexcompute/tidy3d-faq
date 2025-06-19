@@ -26,7 +26,7 @@ _inputs:
 ---
 With Tidy3D's integration with `Autograd`, setting up an inverse design workflow is straightforward.
 
-All you need to do is define a function to create the [`Simulation`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Simulation.html){: .color-primary-hover} object as a function of the optimization parameters, run the simulation, post-process the data, and return the cost function. Once this function is defined, you can call `Autograd.value_and_grad` to run the simulation and obtain the gradients.
+All you need to do is define a function to create the [`Simulation`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Simulation.html){: .color-primary-hover} object as a function of the optimization parameters, run the simulation, post-process the data, and return the cost function. Once this function is defined, you can call `autograd.value_and_grad` to run the simulation and obtain the gradients.
 
 ### General Workflow
 
@@ -39,7 +39,7 @@ All you need to do is define a function to create the [`Simulation`](https://doc
 3. **Wrap it all in a single function**  
    This wrapper receives the optimization parameters, creates and runs the simulation, applies the post-processing, and returns the objective function.
 
-4. **Use `Autograd.value_and_grad`**  
-   Input the wrapper function into `Autograd.value_and_grad` to obtain both the cost function value and its derivatives. These gradients can then be used in a gradient-based optimization algorithm to guide the inverse design process.
+4. **Use `autograd.value_and_grad`**  
+   Input the wrapper function into `autograd.value_and_grad` to obtain both the cost function value and its derivatives. These gradients can then be used in a gradient-based optimization algorithm to guide the inverse design process.
 
 We highly recommend watching the [Inverse Design lectures](https://www.flexcompute.com/tidy3d/learning-center/inverse-design/){: .color-primary-hover} if you're new to the adjoint method. You can also explore this [tutorial](https://www.flexcompute.com/tidy3d/examples/notebooks/Autograd1Intro/){: .color-primary-hover} for an introduction to automatic differentiation and adjoint optimization.

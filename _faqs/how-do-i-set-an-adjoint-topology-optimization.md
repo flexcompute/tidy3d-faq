@@ -31,7 +31,7 @@ Once the simulation is defined, you can use the [web.run](https://docs.flexcompu
 
 <div> </div>
 
-<div>Lastly, use&nbsp;<code>Autograd.value_and_grad</code>&nbsp;to both compute the objective function and the gradient with respect to the design parameters. The objective function gradients can then feed a gradient-based optimization algorithm to drive the inverse design process.&nbsp;</div>
+<div>Lastly, use&nbsp;<code>autograd.value_and_grad</code>&nbsp;to both compute the objective function and the gradient with respect to the design parameters. The objective function gradients can then feed a gradient-based optimization algorithm to drive the inverse design process.&nbsp;</div>
 
 <div> </div>
 

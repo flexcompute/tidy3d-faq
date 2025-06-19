@@ -11,7 +11,7 @@ Additionally, it is possible to apply operations such as rotation, translation, 
 
  
 
-Lastly, use <code>Autograd.value_and_grad</code> to compute both the objective function and the gradient with respect to the design parameters. The objective function gradients can then feed a gradient-based optimization algorithm to drive the inverse design process.
+Lastly, use <code>autograd.value_and_grad</code> to compute both the objective function and the gradient with respect to the design parameters. The objective function gradients can then feed a gradient-based optimization algorithm to drive the inverse design process.
 
  
 
