@@ -16,7 +16,3 @@ Inverse Design
    faq/how-do-i-include-fabrication-constraints-in-adjoint-topology-optimization.md
    faq/how-do-i-include-fabrication-constraints-in-adjoint-level-set-optimization.md
    faq/how-do-i-export-the-final-inverse-design-structure-to-gds.md
-
-   faq/how-can-i-continue-a-adjoint-optmization.md
-   faq/what-monitors-can-be-used-in-adjoint-simulations.md
-   faq/ how-can-i-continue-an-adjoint-optimization.md
