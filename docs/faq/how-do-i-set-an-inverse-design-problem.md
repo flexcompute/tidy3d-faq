@@ -5,18 +5,22 @@
 | 2023-12-21 19:01:14 | Inverse Design |
 
 
-To create an adjoint inverse design setup, you need to use a special <code>Simulation</code> subclass called <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.adjoint.JaxSimulation.html#tidy3d.plugins.adjoint.JaxSimulation">tidy3d.plugins.adjoint.JaxSimulation</a>, which is a <code>jax</code>-compatible stand in for <code>Simulation</code> and behaves almost entirely the same, except for a few important differences:<ol><li>This feature allows for the inclusion of an extra field (<code>.input_structures</code>) consisting of <code>jax</code>-compatible Tidy3D structures. For example, the <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.adjoint.JaxStructure.html#tidy3d.plugins.adjoint.JaxStructure">tidy3d.plugins.adjoint.JaxStructure</a>, which contains a <code>.medium</code> and a <code>.geometry</code> field, both of which may depend on the design parameters. The final gradients of the objective function will be given with respect to the values of the fields mentioned above.</li><li>It accepts the additional field <code>.output_monitors</code>, that defines the set of monitors and corresponding data that the objective function will depend on.</li></ol>
+With Tidy3D's integration with `Autograd`, setting up an inverse design workflow is straightforward.
 
-Once the adjoint simulation is defined, you must use the <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.adjoint.web.run.html">tidy3d.plugins.adjoint.web.run</a> method to send the simulation to our servers. After computing the forward and adjoint simulations, a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.adjoint.JaxSimulationData.html#tidy3d.plugins.adjoint.JaxSimulationData">tidy3d.plugins.adjoint.JaxSimulationData</a> is returned so that you can compute the objective function value. 
+All you need to do is define a function to create the [`Simulation`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Simulation.html) object as a function of the optimization parameters, run the simulation, post-process the data, and return the cost function. Once this function is defined, you can call `autograd.value_and_grad` to run the simulation and obtain the gradients.
 
- 
+### General Workflow
 
-Lastly, use <code>jax.value_and_grad</code> to both compute the objective function <strong>and</strong> the gradient with respect to the design parameters. The objective function gradients can then feed a gradient-based optimization algorithm to drive the inverse design process. 
+1. **Create a `make_sim` function**  
+   This function takes in the optimization parameters and returns a [`Simulation`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Simulation.html) object.
 
- 
+2. **Define a post-processing function**  
+   This function calculates the objective (cost) function from the resulting [`SimulationData`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.components.data.sim_data.SimulationData.html) object.
 
-We highly recommend watching the <a href="https://www.flexcompute.com/tidy3d/learning-center/inverse-design/">Inverse Design</a> lectures if you are new to the adjoint method. You can also go through this <a href="https://www.flexcompute.com/tidy3d/examples/notebooks/AdjointPlugin1Intro/">tutorial</a> for an introduction to the basic concepts related to automatic differentiation and adjoint optimization.
+3. **Wrap it all in a single function**  
+   This wrapper receives the optimization parameters, creates and runs the simulation, applies the post-processing, and returns the objective function.
 
- 
+4. **Use `autograd.value_and_grad`**  
+   Input the wrapper function into `autograd.value_and_grad` to obtain both the cost function value and its derivatives. These gradients can then be used in a gradient-based optimization algorithm to guide the inverse design process.
 
- 
+We highly recommend watching the [Inverse Design lectures](https://www.flexcompute.com/tidy3d/learning-center/inverse-design/) if you're new to the adjoint method. You can also explore this [tutorial](https://www.flexcompute.com/tidy3d/examples/notebooks/Autograd1Intro/) for an introduction to automatic differentiation and adjoint optimization.

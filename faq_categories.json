@@ -285,7 +285,6 @@
       "_faqs/what-is-adjoint-simulation.md",
       "_faqs/how-many-simulations-are-performed-in-adjoint-calculations.md",
       "_faqs/how-is-the-adjoint-simulation-billed.md",
-      "_faqs/how-to-install-jax.md",
       "_faqs/how-do-i-set-an-inverse-design-problem.md",
       "_faqs/what-are-the-differences-between-adjoint-shape-topology-and-level-set-optimizations.md",
       "_faqs/how-do-i-set-an-adjoint-shape-optimization.md",
