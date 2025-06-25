@@ -311,5 +311,10 @@
     "category": "Heat",
     "id": "heat",
     "faqs": []
+  },
+  {
+    "category": "Charge",
+    "id": "charge",
+    "faqs": []
   }
 ]
