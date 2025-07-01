@@ -1,6 +1,6 @@
 ---
 title: How Can I Define a Semiconductor Material?
-date: 2025-06-24 19:15:49
+date: 2025-06-30 21:10:35
 enabled: true
 category: "Charge"
 ---
@@ -21,7 +21,8 @@ A semiconductor material is specified using the [`MultiPhysicsMedium`](https://d
 
 ### Mobility Models
 
-Mobility can be temperature-dependent (based on the [Caughey-Thomas mobility model](None){: .color-primary-hover}, implemented with the class [`CaugheyThomasMobility`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.CaugheyThomasMobility.html){: .color-primary-hover}) or constant (implemented with the class [`ConstantMobilityModel`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ConstantMobilityModel.html){: .color-primary-hover}).
+Mobility can be dependent on both doping and temperature, based on the [Caughey-Thomas mobility model](None){: .color-primary-hover}, implemented with the class [`CaugheyThomasMobility`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.CaugheyThomasMobility.html){: .color-primary-hover}, or constant (implemented with the class [`ConstantMobilityModel`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ConstantMobilityModel.html){: .color-primary-hover}.
+
 
 - `mobility_n` (Union[`CaugheyThomasMobility`, `ConstantMobilityModel`]) – Electron mobility model.
 
@@ -29,7 +30,7 @@ Mobility can be temperature-dependent (based on the [Caughey-Thomas mobility mod
 
 ---
 
-### Recombination Models
+### Electron-hole Recombination Mechanisms
 
 Recombination mechanisms can include:
 
@@ -45,10 +46,13 @@ Recombination mechanisms can include:
 
 - `delta_E_g` – [Slotboom model for band-gap narrowing](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SlotboomBandGapNarrowing.html){: .color-primary-hover}
 
-- `N_a` (PositiveFloat) – Number of acceptor charges (holes).  
+- `N_a` – Number of acceptor charges (holes).
   *Units: cm⁻³*
 
-- `N_d` (PositiveFloat) – Number of donor charges (electrons).  
+- `N_d` – Number of donor charges (electrons).  
   *Units: cm⁻³*
 
-For a practical example, please refer to [this example notebook](https://www.flexcompute.com/tidy3d/examples/notebooks/ThermoOpticDopedModulator/){: .color-primary-hover}.
+The free carrier densities can be either a `float` number or a [doping box](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/index.html#doping){: .color-primary-hover} object.
+
+
+For a practical example, please refer to [this example notebook](https://www.flexcompute.com/tidy3d/examples/notebooks/ChargeSolver){: .color-primary-hover}.

@@ -10,5 +10,4 @@ Charge
    faq/what-charge-monitors-are-available.md
    faq/how-can-i-define-a-semiconductor-material.md
    faq/how-do-i-set-a-charge-simulation.md
-   faq/what-types-of-charge-simulations-are-available.md
    faq/how-can-i-set-charge-boundary-conditions.md

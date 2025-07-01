@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-06-24 19:15:49 | Charge |
+| 2025-06-30 21:10:35 | Charge |
 
 
 Currently, there are three monitors available:
@@ -11,14 +11,13 @@ Currently, there are three monitors available:
 
     - This monitor records the electric potential ($\Phi$).
  
-    
+
 
 ```python
-    import tidy3d as td
-    voltage_monitor_z0 = td.SteadyPotentialMonitor(
-        center=(0, 0.14, 0), size=(0.6, 0.3, 0), name="voltage_z0", unstructured=True,
-    )
-    ```
+import tidy3d as td
+voltage_monitor_z0 = td.SteadyPotentialMonitor(
+center=(0, 0.14, 0), size=(0.6, 0.3, 0), name="voltage_z0", unstructured=True,
+)```
 
 
 
@@ -26,14 +25,13 @@ Currently, there are three monitors available:
 
     - This monitor records the steady-state free carrier concentrations ($J_n$ for electrons and $J_p$ for holes).
 
-    
+
 
 ```python
-    import tidy3d as td
-    voltage_monitor_z0 = td.SteadyFreeCarrierMonitor(
-        center=(0, 0.14, 0), size=(0.6, 0.3, 0), name="voltage_z0", unstructured=True,
-    )
-    ```
+import tidy3d as td
+voltage_monitor_z0 = td.SteadyFreeCarrierMonitor(
+center=(0, 0.14, 0), size=(0.6, 0.3, 0), name="voltage_z0", unstructured=True,
+)```
 
 
 
@@ -41,14 +39,13 @@ Currently, there are three monitors available:
 
     - This monitor records the small-signal capacitance within the area or volume defined by the monitor.
 
-    
+
 
 ```python
-    import tidy3d as td
-    capacitance_global_mnt = td.SteadyCapacitanceMonitor(
-        center=(0, 0.14, 0), size=(td.inf, td.inf, 0), name="capacitance_global_mnt",
-    )
-    ```
+import tidy3d as td
+capacitance_global_mnt = td.SteadyCapacitanceMonitor(
+center=(0, 0.14, 0), size=(td.inf, td.inf, 0), name="capacitance_global_mnt",
+)```
 
 
 

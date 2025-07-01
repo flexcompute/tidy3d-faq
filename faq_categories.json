@@ -310,11 +310,26 @@
   {
     "category": "Heat",
     "id": "heat",
-    "faqs": []
+    "faqs": [
+      "_faqs/how-do-i-use-heat-data-in-a-fdtd-simulation.md",
+      "_faqs/how-do-i-set-a-heat-simulation.md",
+      "_faqs/how-do-i-set-a-heat-source.md",
+      "_faqs/what-are-the-units-for-heat-simulation.md",
+      "_faqs/which-types-of-boundary-conditions-are-available.md",
+      "_faqs/how-can-i-set-boundary-conditions.md"
+    ]
   },
   {
     "category": "Charge",
     "id": "charge",
-    "faqs": []
+    "faqs": [
+      "_faqs/how-can-i-define-doping-profile.md",
+      "_faqs/which-types-of-charge-boundary-conditions-are-available.md",
+      "_faqs/how-can-i-define-the-simulation-grid.md",
+      "_faqs/what-charge-monitors-are-available.md",
+      "_faqs/how-can-i-define-a-semiconductor-material.md",
+      "_faqs/how-do-i-set-a-charge-simulation.md",
+      "_faqs/how-can-i-set-charge-boundary-conditions.md"
+    ]
   }
 ]

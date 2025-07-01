@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-06-24 19:15:49 | Charge |
+| 2025-06-30 21:10:35 | Charge |
 
 
 A semiconductor material is specified using the [`MultiPhysicsMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.components.material.multi_physics.MultiPhysicsMedium.html), by setting its `charge` property to a [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html). The required parameters for the [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html) are:
@@ -20,7 +20,7 @@ A semiconductor material is specified using the [`MultiPhysicsMedium`](https://d
 
 
 
-### Recombination Models
+### Electron-hole Recombination Mechanisms
 
 Recombination mechanisms can include:
 
@@ -36,10 +36,13 @@ Recombination mechanisms can include:
 
 - `delta_E_g` – [Slotboom model for band-gap narrowing](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SlotboomBandGapNarrowing.html)
 
-- `N_a` (PositiveFloat) – Number of acceptor charges (holes).  
+- `N_a` – Number of acceptor charges (holes).
   *Units: cm⁻³*
 
-- `N_d` (PositiveFloat) – Number of donor charges (electrons).  
+- `N_d` – Number of donor charges (electrons).  
   *Units: cm⁻³*
 
-For a practical example, please refer to [this example notebook](https://www.flexcompute.com/tidy3d/examples/notebooks/ThermoOpticDopedModulator/).
+The free carrier densities can be either a `float` number or a [doping box](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/index.html#doping) object.
+
+
+For a practical example, please refer to [this example notebook](https://www.flexcompute.com/tidy3d/examples/notebooks/ChargeSolver).

@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-06-24 19:15:49 | Charge |
+| 2025-06-30 21:10:35 | Charge |
 
 
 The steps to set up a Charge simulation are very similar to those for an FDTD simulation:
@@ -25,6 +25,9 @@ The steps to set up a Charge simulation are very similar to those for an FDTD si
 
 - **Define meshing specifications**  
   The simplest option is to use the [UniformUnstructuredGrid](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.UniformUnstructuredGrid.html) mesh type, where you only need to specify the grid size `dl`. The mesher will automatically generate a mesh that fits the structures while respecting the given resolution.
+
+- **Define the simulation type**  
+  Define the simulation type via the `analysis_spec` of the [HeatChargeSimulation](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeSimulation.html) object. Currently, only [IsothermalSteadyChargeDCAnalysis](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.IsothermalSteadyChargeDCAnalysis.html) is supported.
 
 - **Create the simulation object**  
   Create a [HeatChargeSimulation](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeSimulation.html) object.
