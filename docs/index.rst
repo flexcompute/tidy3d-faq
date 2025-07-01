@@ -6,6 +6,7 @@ FAQ |:mag_right:|
 
    about-tidy3d
    boundary-conditions
+   charge
    data-visualization-and-postprocessing
    eme
    grid-specification
