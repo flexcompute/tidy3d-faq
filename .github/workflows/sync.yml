@@ -15,7 +15,7 @@ on:
         required: true
       targetBranch:
         description: target branch
-        default: develop
+        default: flexcompute/main
         required: true
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SOURCE_BRANCH: ${{ inputs.sourceBranch || 'develop' }}
-      TARGET_BRANCH: ${{ inputs.targetBranch || 'develop' }}
+      TARGET_BRANCH: ${{ inputs.targetBranch || 'flexcompute/main' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,35 +40,35 @@ jobs:
           pip install -r script/requirements.txt
           python script/convert-and-sync.py
 
-      - name: Checkout flexcompute.com
+      - name: Checkout flex
         uses: actions/checkout@v4
         with:
-          repository: cmsflexc/flexcompute.com
+          repository: flexcompute/flex
           token: ${{ secrets.GH_PAT }}
-          path: flexcompute.com
+          path: flex
           ref: ${{ env.TARGET_BRANCH }}
 
       - run: |
           cd ${{ github.workspace }}
-          [ ! -d "${{ github.workspace }}/flexcompute.com/assets/tidy3d/faqs" ] && mkdir -p ${{ github.workspace }}/flexcompute.com/assets/tidy3d/faqs
-          [ ! -d "${{ github.workspace }}/flexcompute.com/_data/tidy3d_faqs" ] && mkdir -p ${{ github.workspace }}/flexcompute.com/_data/tidy3d_faqs
-          rsync -r ${{ github.workspace }}/tidy3d-faq/temp/ ${{ github.workspace }}/flexcompute.com/_faqs
-          rsync -r ${{ github.workspace }}/tidy3d-faq/_faqs/img/ ${{ github.workspace }}/flexcompute.com/assets/tidy3d/faqs
-          rsync ${{ github.workspace }}/tidy3d-faq/faq_categories.yml ${{ github.workspace }}/flexcompute.com/_data/tidy3d_faqs/faq_categories.yml
+          [ ! -d "${{ github.workspace }}/flex/frontend/flexcompute.com/assets/tidy3d/faqs" ] && mkdir -p ${{ github.workspace }}/flex/frontend/flexcompute.com/assets/tidy3d/faqs
+          [ ! -d "${{ github.workspace }}/flex/frontend/flexcompute.com/_data/tidy3d_faqs" ] && mkdir -p ${{ github.workspace }}/flex/frontend/flexcompute.com/_data/tidy3d_faqs
+          rsync -r ${{ github.workspace }}/tidy3d-faq/temp/ ${{ github.workspace }}/flex/frontend/flexcompute.com/_faqs
+          rsync -r ${{ github.workspace }}/tidy3d-faq/_faqs/img/ ${{ github.workspace }}/flex/frontend/flexcompute.com/assets/tidy3d/faqs
+          rsync ${{ github.workspace }}/tidy3d-faq/faq_categories.yml ${{ github.workspace }}/flex/frontend/flexcompute.com/_data/tidy3d_faqs/faq_categories.yml
 
       - run: |
-          ls -la ${{ github.workspace }}/flexcompute.com/_faqs
-          ls -la ${{ github.workspace }}/flexcompute.com/assets/tidy3d/faqs
-          ls -la ${{ github.workspace }}/flexcompute.com/_data/tidy3d_faqs
+          ls -la ${{ github.workspace }}/flex/frontend/flexcompute.com/_faqs
+          ls -la ${{ github.workspace }}/flex/frontend/flexcompute.com/assets/tidy3d/faqs
+          ls -la ${{ github.workspace }}/flex/frontend/flexcompute.com/_data/tidy3d_faqs
 
       - name: Commit change to target repo
         shell: bash
-        working-directory: ${{ github.workspace }}/flexcompute.com
+        working-directory: ${{ github.workspace }}/flex
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.email "github_auto@flexcompute.com"
           git config --global user.name "github_auto"
-          git add .
+          git add frontend/flexcompute.com/
           git diff-index --quiet HEAD || git commit -m "sync(): sync from tidy3d-faq"
           git push
