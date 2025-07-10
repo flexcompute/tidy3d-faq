@@ -28,37 +28,36 @@ In this FAQ, we will overview some steps to help you debug and resolve this issu
 
 Before changing any settings, let's make sure you can reach the Tidy3D servers.
 
-
 **Test connectivity using `ping`**. This helps confirm if the issue is with SSL verification or basic network access. You should run these commands from your command line (Terminal, PowerShell, or the Anaconda Prompt). 
 
-      * Test connection to the web server:
+* Test connection to the web server:
 
-        ```bash        
-        ○ → ping -c 3 tidy3d.simulation.cloud
-        PING tidy3d.simulation.cloud (3.160.231.60) 56(84) bytes of data.
-        64 bytes from server-3-160-231-60.mad53.r.cloudfront.net (3.160.231.60): icmp_seq=1 ttl=245 time=58.7 ms
-        64 bytes from server-3-160-231-60.mad53.r.cloudfront.net (3.160.231.60): icmp_seq=2 ttl=245 time=77.9 ms
-        64 bytes from server-3-160-231-60.mad53.r.cloudfront.net (3.160.231.60): icmp_seq=3 ttl=245 time=69.2 ms
+  ```bash        
+  ○ → ping -c 3 tidy3d.simulation.cloud
+  PING tidy3d.simulation.cloud (3.160.231.60) 56(84) bytes of data.
+  64 bytes from server-3-160-231-60.mad53.r.cloudfront.net (3.160.231.60): icmp_seq=1 ttl=245 time=58.7 ms
+  64 bytes from server-3-160-231-60.mad53.r.cloudfront.net (3.160.231.60): icmp_seq=2 ttl=245 time=77.9 ms
+  64 bytes from server-3-160-231-60.mad53.r.cloudfront.net (3.160.231.60): icmp_seq=3 ttl=245 time=69.2 ms
 
-        --- tidy3d.simulation.cloud ping statistics ---
-        3 packets transmitted, 3 received, 0% packet loss, time 2002ms
-        rtt min/avg/max/mdev = 58.661/68.594/77.930/7.877 ms
-        ```
+  --- tidy3d.simulation.cloud ping statistics ---
+  3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+  rtt min/avg/max/mdev = 58.661/68.594/77.930/7.877 ms
+  ```
 
-      * Test connection to the API endpoints:
+* Test connection to the API endpoints:
 
-        ```bash        
-        ○ → curl -X GET https://tidy3d-api.simulation.cloud
-        {
-          "error" : "Unauthorized",
-          "detail" : "Access is denied",
-          "code" : "401",
-          "httpStatus" : "401 UNAUTHORIZED",
-          "warning" : ""
-        }
-        ```
+  ```bash        
+  ○ → curl -X GET https://tidy3d-api.simulation.cloud
+  {
+    "error" : "Unauthorized",
+    "detail" : "Access is denied",
+    "code" : "401",
+    "httpStatus" : "401 UNAUTHORIZED",
+    "warning" : ""
+  }
+  ```
 
-        **Expected output:** A `401 Unauthorized` error message. This is good news; it means you can reach our API server, and the problem is likely with authentication or SSL certificate verification.
+  **Expected output:** A `401 Unauthorized` error message. This is good news; it means you can reach our API server, and the problem is likely with authentication or SSL certificate verification.
 
 
 ## Step 2: Disable SSL Verification (Quick Workaround)
@@ -69,39 +68,38 @@ This is done by setting the `TIDY3D_SSL_VERIFY` environment variable to `false`.
 
 #### Setting the Environment Variable:
 
-  * **On Windows (in Command Prompt)**:
+* **On Windows (in Command Prompt)**:
 
-    ```bash
-    set TIDY3D_SSL_VERIFY=false
-    ```
+  ```bash
+  set TIDY3D_SSL_VERIFY=false
+  ```
 
-    To set it permanently, use `setx TIDY3D_SSL_VERIFY false`.
+  To set it permanently, use `setx TIDY3D_SSL_VERIFY false`.
 
-  * **On macOS or Linux (in a bash terminal)**:
+* **On macOS or Linux (in a bash terminal)**:
 
-    ```bash
-    export TIDY3D_SSL_VERIFY="false"
-    ```
+  ```bash
+  export TIDY3D_SSL_VERIFY="false"
+  ```
 
 #### Verifying the Environment Variable:
 
 **It is essential to ensure the variable is set correctly within the environment where you run your script.**
 
-  * **In your terminal**, run the following command.
+* **In your terminal**, run the following command.
 
-      * Windows: `echo %TIDY3D_SSL_VERIFY%`
-      * macOS/Linux: `echo $TIDY3D_SSL_VERIFY`
-      * The output should be `false`.
+  * Windows: `echo %TIDY3D_SSL_VERIFY%`
+  * macOS/Linux: `echo $TIDY3D_SSL_VERIFY`
+  * The output should be `false`.
 
-  * **Inside your Python script**, add these lines to the top to see what value the script is reading:
+* **Inside your Python script**, add these lines to the top to see what value the script is reading:
 
-    ```python
-    import os
-    print(f"TIDY3D_SSL_VERIFY is set to: {os.getenv('TIDY3D_SSL_VERIFY')}")
-    ```
+```python
+import os
+print(f"TIDY3D_SSL_VERIFY is set to: {os.getenv('TIDY3D_SSL_VERIFY')}")
+```
 
-    When you run your script, you should see the confirmation printed. If you see `None` or an empty string, the variable was not set correctly in your current session.
-
+When you run your script, you should see the confirmation printed. If you see `None` or an empty string, the variable was not set correctly in your current session.
 
 ## Step 3: Run a Diagnostic Script
 
@@ -160,6 +158,6 @@ With `TIDY3D_SSL_VERIFY` set to `false` and `TIDY3D_API_KEY` set correctly, the 
 
 The most robust and secure solution is to have your IT department add the Tidy3D SSL certificate to your system's trust store. This allows your machine to verify our servers' identity correctly without disabling security features.
 
-  **Action**: Please ask your network administrator to whitelist the API endpoint `https://tidy3d-api.simulation.cloud` and install the following root certificate [https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem](https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem)
+**Action**: Please ask your network administrator to whitelist the API endpoint `https://tidy3d-api.simulation.cloud` and install the following root certificate [https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem](https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem)
 
 If these steps do not resolve your issue, please contact our support team and provide the logs from the commands you have tried.
