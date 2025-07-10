@@ -111,7 +111,6 @@ If the issue persists, running a minimal script can help isolate the problem to 
 2.  Set the `TIDY3D_API_KEY` and `TIDY3D_SSL_VERIFY` environment variables in your terminal as shown in Step 2.
 3.  Run the script with `python test_connection.py`.
 
-<!-- end list -->
 
 ```python
 # test_connection.py
