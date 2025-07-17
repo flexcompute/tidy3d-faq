@@ -1,9 +1,9 @@
-# Why are some materials not showing up?
-
-| Date       | Category    |
-|------------|-------------|
-| 2025-07-17 13:05:34 | Simulation Troubleshoot |
-
+---
+title: Why are some materials not showing up?
+date: 2025-07-17 14:17:34
+enabled: true
+category: "Simulation Troubleshoot"
+---
 
 Tidy3D resolves material overlap by their priority - see [here](https://docs.flexcompute.com/projects/tidy3d/en/latest/faq/docs/faq/when-two-structures-overlap-what-is-the-priority-determined.html) for details.
 
