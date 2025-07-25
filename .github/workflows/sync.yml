@@ -44,7 +44,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: flexcompute/flex
-          token: ${{ secrets.GH_PAT }}
           path: flex
           ref: ${{ env.TARGET_BRANCH }}
 
@@ -64,8 +63,6 @@ jobs:
       - name: Commit change to target repo
         shell: bash
         working-directory: ${{ github.workspace }}/flex
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.email "github_auto@flexcompute.com"
           git config --global user.name "github_auto"
