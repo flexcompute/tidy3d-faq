@@ -23,6 +23,12 @@ Note that sometimes, SSL errors can also manifest as authentication errors, or c
 
 In this FAQ, we will overview some steps to help you debug and resolve this issue.
 
+## Step 0: Windows quick fix
+Sometimes on Windows running the following will resolve the problem right away. Try this first:
+```bash
+pip install pip-system-certs
+```
+If this doesn't work, proceed with the rest of this guide.
 
 ## Step 1: Verify Your Environment and Connectivity
 
