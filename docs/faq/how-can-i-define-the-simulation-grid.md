@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-08-26 10:06:59 | Charge |
+| 2025-08-26 12:47:03 | Charge |
 
 
 There are two classes available for defining the grid specification:

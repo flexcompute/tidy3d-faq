@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-08-26 10:06:59 | Charge |
+| 2025-08-26 12:47:03 | Charge |
 
 
 The steps to set up a Charge simulation are very similar to those for an FDTD simulation:

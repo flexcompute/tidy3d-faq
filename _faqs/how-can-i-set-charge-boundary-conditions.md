@@ -1,6 +1,6 @@
 ---
 title: How Can I Set Charge Boundary Conditions?
-date: 2025-08-26 10:06:59
+date: 2025-08-26 12:47:03
 enabled: true
 category: "Charge"
 ---
