@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-06-30 21:10:35 | Charge |
+| 2025-08-26 10:03:06 | Charge |
 
 
 There are two classes available for defining the grid specification:
@@ -14,7 +14,8 @@ There are two classes available for defining the grid specification:
  
 
 ```python
-heat_grid = UniformUnstructuredGrid(dl=0.1)```
+heat_grid = UniformUnstructuredGrid(dl=0.1)
+```
 
 
 
@@ -26,11 +27,12 @@ heat_grid = UniformUnstructuredGrid(dl=0.1)```
 
 ```python
 heat_grid = DistanceUnstructuredGrid(
-dl_interface=0.1,
-dl_bulk=1,
-distance_interface=0.3,
-distance_bulk=2,
-)```
+     dl_interface=0.1,
+     dl_bulk=1,
+     distance_interface=0.3,
+     distance_bulk=2,
+ )
+```
 
 
 

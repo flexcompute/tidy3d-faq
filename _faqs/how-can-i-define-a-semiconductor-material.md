@@ -1,10 +1,10 @@
 ---
 title: How Can I Define a Semiconductor Material?
-date: 2025-06-30 21:10:35
+date: 2025-08-26 10:03:06
 enabled: true
 category: "Charge"
 ---
-A semiconductor material is specified using the [`MultiPhysicsMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.components.material.multi_physics.MultiPhysicsMedium.html){: .color-primary-hover}, by setting its `charge` property to a [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html){: .color-primary-hover}. The required parameters for the [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html){: .color-primary-hover} are:
+A semiconductor material is specified using the [`MultiPhysicsMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.components.material.multi_physics.MultiPhysicsMedium.html), by setting its `charge` property to a [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html). The required parameters for the [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html) are:
 
 ### Density of States and Band Gap Energy
 
@@ -21,7 +21,7 @@ A semiconductor material is specified using the [`MultiPhysicsMedium`](https://d
 
 ### Mobility Models
 
-Mobility can be dependent on both doping and temperature, based on the [Caughey-Thomas mobility model](None){: .color-primary-hover}, implemented with the class [`CaugheyThomasMobility`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.CaugheyThomasMobility.html){: .color-primary-hover}, or constant (implemented with the class [`ConstantMobilityModel`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ConstantMobilityModel.html){: .color-primary-hover}.
+Mobility can be dependent on both doping and temperature, based on the [Caughey-Thomas mobility model](None), implemented with the class [`CaugheyThomasMobility`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.CaugheyThomasMobility.html), or constant (implemented with the class [`ConstantMobilityModel`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ConstantMobilityModel.html).
 
 
 - `mobility_n` (Union[`CaugheyThomasMobility`, `ConstantMobilityModel`]) – Electron mobility model.
@@ -34,9 +34,9 @@ Mobility can be dependent on both doping and temperature, based on the [Caughey-
 
 Recombination mechanisms can include:
 
-- [`Shockley-Read-Hall`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ShockleyReedHallRecombination.html){: .color-primary-hover}  
-- [`Radiative Recombination`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.RadiativeRecombination.html){: .color-primary-hover}  
-- [`Auger Recombination`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.AugerRecombination.html){: .color-primary-hover}
+- [`Shockley-Read-Hall`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ShockleyReedHallRecombination.html)  
+- [`Radiative Recombination`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.RadiativeRecombination.html)  
+- [`Auger Recombination`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.AugerRecombination.html)
 
 - `R` (List) – Array containing the recombination models to be applied to the material.
 
@@ -44,7 +44,7 @@ Recombination mechanisms can include:
 
 ### Optional Arguments
 
-- `delta_E_g` – [Slotboom model for band-gap narrowing](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SlotboomBandGapNarrowing.html){: .color-primary-hover}
+- `delta_E_g` – [Slotboom model for band-gap narrowing](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SlotboomBandGapNarrowing.html)
 
 - `N_a` – Number of acceptor charges (holes).
   *Units: cm⁻³*
@@ -52,7 +52,7 @@ Recombination mechanisms can include:
 - `N_d` – Number of donor charges (electrons).  
   *Units: cm⁻³*
 
-The free carrier densities can be either a `float` number or a [doping box](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/index.html#doping){: .color-primary-hover} object.
+The free carrier densities can be either a `float` number or a [doping box](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/index.html#doping) object.
 
 
-For a practical example, please refer to [this example notebook](https://www.flexcompute.com/tidy3d/examples/notebooks/ChargeSolver){: .color-primary-hover}.
+For a practical example, please refer to [this example notebook](https://www.flexcompute.com/tidy3d/examples/notebooks/ChargeSolver).

@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-06-30 21:10:35 | Charge |
+| 2025-08-26 10:03:06 | Charge |
 
 
 Boundary conditions for heat simulations are defined using the [HeatChargeBoundarySpec](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeBoundarySpec.html) class, which has two required fields: `condition` and `placement`.
