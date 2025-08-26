@@ -1,6 +1,6 @@
 ---
 title: How Do I Set a Charge Simulation?
-date: 2025-08-26 10:06:59
+date: 2025-06-30 21:10:35
 enabled: true
 category: "Charge"
 ---

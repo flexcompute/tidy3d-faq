@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-08-26 10:06:59 | Charge |
+| 2025-06-30 21:10:35 | Charge |
 
 
 There are three boundary conditions available for Charge simulations:
@@ -13,10 +13,8 @@ There are three boundary conditions available for Charge simulations:
 
 ```python
 import tidy3d as td
-
-voltage_source = td.DCVoltageSource(voltage=1)
-voltage_bc = td.VoltageBC(source=voltage_source)
-```
+voltage\_source = td.DCVoltageSource(voltage=1)
+voltage\_bc = td.VoltageBC(source=voltage\_source)```
 
 
 
@@ -28,10 +26,8 @@ Note that the `voltage` argument can be an list or array, in which case all volt
 
 ```python
 import tidy3d as td
-
-current_source = td.DCCurrentSource(current=1)
-current_bc = td.CurrentBC(source=current_source)
-```
+current\_source = td.DCCurrentSource(current=1)
+current\_bc = td.CurrentBC(source=current\_source)```
 
 
 
@@ -43,8 +39,7 @@ The `current` argument must be a `float`.
 
 ```python
 import tidy3d as td
-bc = td.InsulatingBC()
-```
+bc = td.InsulatingBC()```
 
 
 

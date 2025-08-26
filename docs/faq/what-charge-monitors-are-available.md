@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-08-26 10:06:59 | Charge |
+| 2025-06-30 21:10:35 | Charge |
 
 
 Currently, there are three monitors available:
@@ -15,14 +15,9 @@ Currently, there are three monitors available:
 
 ```python
 import tidy3d as td
-
 voltage_monitor_z0 = td.SteadyPotentialMonitor(
-    center=(0, 0.14, 0),
-    size=(0.6, 0.3, 0),
-    name="voltage_z0",
-    unstructured=True,
-)
-```
+center=(0, 0.14, 0), size=(0.6, 0.3, 0), name="voltage_z0", unstructured=True,
+)```
 
 
 
@@ -34,14 +29,9 @@ voltage_monitor_z0 = td.SteadyPotentialMonitor(
 
 ```python
 import tidy3d as td
-
 voltage_monitor_z0 = td.SteadyFreeCarrierMonitor(
-    center=(0, 0.14, 0),
-    size=(0.6, 0.3, 0),
-    name="voltage_z0",
-    unstructured=True,
-)
-```
+center=(0, 0.14, 0), size=(0.6, 0.3, 0), name="voltage_z0", unstructured=True,
+)```
 
 
 
@@ -53,13 +43,9 @@ voltage_monitor_z0 = td.SteadyFreeCarrierMonitor(
 
 ```python
 import tidy3d as td
-
 capacitance_global_mnt = td.SteadyCapacitanceMonitor(
-    center=(0, 0.14, 0),
-    size=(td.inf, td.inf, 0),
-    name="capacitance_global_mnt",
-)
-```
+center=(0, 0.14, 0), size=(td.inf, td.inf, 0), name="capacitance_global_mnt",
+)```
 
 
 
