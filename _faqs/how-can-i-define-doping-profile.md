@@ -1,15 +1,15 @@
 ---
 title: How Can I Define Doping Profile?
-date: 2025-08-26 10:03:06
+date: 2025-08-26 10:06:59
 enabled: true
 category: "Charge"
 ---
-Doping is defined as a box with a specific doping profile and is added to a [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html) object.  
-Positive doping corresponds to the `N_d` (number of donors) parameter of the [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html), while negative doping corresponds to the `N_a` (number of acceptors).
+Doping is defined as a box with a specific doping profile and is added to a [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html){: .color-primary-hover} object.  
+Positive doping corresponds to the `N_d` (number of donors) parameter of the [`SemiconductorMedium`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SemiconductorMedium.html){: .color-primary-hover}, while negative doping corresponds to the `N_a` (number of acceptors).
 
 The doping profile can be:
 
-- Uniform, implemented using the [`ConstantDoping`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ConstantDoping.html) object:
+- Uniform, implemented using the [`ConstantDoping`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ConstantDoping.html){: .color-primary-hover} object:
 
 <div markdown class="code-snippet">
 {% highlight python %}
@@ -34,7 +34,7 @@ constant_box2 = td.ConstantDoping.from_bounds(
 {% endhighlight %}
 {% include copy-button.html %}</div>
 
-- Gaussian, implemented using the [`GaussianDoping`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.GaussianDoping.html) object:
+- Gaussian, implemented using the [`GaussianDoping`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.GaussianDoping.html){: .color-primary-hover} object:
 
 <div markdown class="code-snippet">
 {% highlight python %}

@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-08-26 10:03:06 | Charge |
+| 2025-08-26 10:06:59 | Charge |
 
 
 There are three boundary conditions available for Charge simulations:

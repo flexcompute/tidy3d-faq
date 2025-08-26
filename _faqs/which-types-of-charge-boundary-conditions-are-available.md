@@ -1,12 +1,12 @@
 ---
 title: Which Types of Charge Boundary Conditions are Available?
-date: 2025-08-26 10:03:06
+date: 2025-08-26 10:06:59
 enabled: true
 category: "Charge"
 ---
 There are three boundary conditions available for Charge simulations:
 
-1) Voltage boundary ([VoltageBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.VoltageBC.html)), which sets a constant potential and is commonly used to model applied bias.
+1) Voltage boundary ([VoltageBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.VoltageBC.html){: .color-primary-hover}), which sets a constant potential and is commonly used to model applied bias.
 
 <div markdown class="code-snippet">
 {% highlight python %}
@@ -19,7 +19,7 @@ voltage_bc = td.VoltageBC(source=voltage_source)
 
 Note that the `voltage` argument can be an list or array, in which case all voltages will be simulated.
 
-2) Current boundary ([CurrentBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.CurrentBC.html)), which sets a constant current and is commonly used to model a fixed current source.
+2) Current boundary ([CurrentBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.CurrentBC.html){: .color-primary-hover}), which sets a constant current and is commonly used to model a fixed current source.
 
 <div markdown class="code-snippet">
 {% highlight python %}
@@ -32,7 +32,7 @@ current_bc = td.CurrentBC(source=current_source)
 
 The `current` argument must be a `float`.
 
-3) Insulating boundary ([InsulatingBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.InsulatingBC.html)), which models an insulating boundary that blocks charge flow.
+3) Insulating boundary ([InsulatingBC](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.InsulatingBC.html){: .color-primary-hover}), which models an insulating boundary that blocks charge flow.
 
 <div markdown class="code-snippet">
 {% highlight python %}
