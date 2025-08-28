@@ -29,14 +29,14 @@ port_right_top = Port(
 
 
 
-Next, add the base simulation and ports to the [tidy3d.plugins.smatrix.ComponentModeler](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.smatrix.ComponentModeler.html), along with the frequency of interest and a name for saving the batch of simulations that will get created later.
+Next, add the base simulation and ports to the [tidy3d.plugins.smatrix.ModalComponentModeler](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.smatrix.ComponentModeler.html), along with the frequency of interest and a name for saving the batch of simulations that will get created later.
 
 
 
 ```python
-from tidy3d.plugins.smatrix.smatrix import ComponentModeler
+from tidy3d.plugins.smatrix.smatrix import ModalComponentModeler
 
-modeler = ComponentModeler(
+modeler = ModalComponentModeler(
   simulation=sim,
   ports=ports,
   freqs=[freq0],
