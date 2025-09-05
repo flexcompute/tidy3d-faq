@@ -90,7 +90,8 @@
       "_faqs/how-do-i-load-a-commonly-used-dispersive-material.md",
       "_faqs/how-can-i-define-a-2d-material.md",
       "_faqs/how-can-i-define-graphene.md",
-      "_faqs/how-can-i-define-a-nonlinear-material.md"
+      "_faqs/how-can-i-define-a-nonlinear-material.md",
+      "_faqs/how-can-i-save-and-load-a-fitted-medium.md"
     ]
   },
   {
