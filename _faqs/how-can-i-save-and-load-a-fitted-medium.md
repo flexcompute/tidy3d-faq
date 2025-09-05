@@ -1,6 +1,6 @@
 ---
 title: How Can I Save and Load a Fitted Medium?
-date: 2025-09-05 17:18:44
+date: 2025-09-05 17:21:49
 enabled: true
 category: "Mediums"
 ---
