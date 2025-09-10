@@ -39,4 +39,4 @@ where:
     <li>$\psi_g=\arctan(\frac{z+z_0}{z_r})-\arctan(\frac{z_0}{z_r})$ is the Gouy phase</li>
 </ul>
 
-<div>See the code [here](/https://docs.flexcompute.com/projects/tidy3d/en/latest/_modules/tidy3d/components/beam.html#GaussianBeamProfile).</div>
+<div>See the code [here](https://docs.flexcompute.com/projects/tidy3d/en/latest/_modules/tidy3d/components/beam.html#GaussianBeamProfile).</div>
