@@ -332,5 +332,20 @@
       "_faqs/how-do-i-set-a-charge-simulation.md",
       "_faqs/how-can-i-set-charge-boundary-conditions.md"
     ]
+  },
+  {
+    "category": "Web API",
+    "id": "web-api",
+    "faqs": [
+      "_faqs/web.Job.md",
+      "_faqs/web.run.md",
+      "_faqs/web.get_tasks.md",
+      "_faqs/web.abort.md",
+      "_faqs/web.Batch.md",
+      "_faqs/web.account.md",
+      "_faqs/web.estimate_cost.md",
+      "_faqs/td.SimulationData.from_file.md",
+      "_faqs/web.load.md"
+    ]
   }
 ]
