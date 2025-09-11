@@ -1,6 +1,6 @@
 ---
 title: How Can I Save and Load a Fitted Medium?
-date: 2025-09-05 17:21:49
+date: 2025-09-11 18:26:45
 enabled: true
 category: "Mediums"
 ---
@@ -19,3 +19,9 @@ Now, the saved medium can be loaded with the [PoleResidue](https://docs.flexcomp
 loaded_medium = td.PoleResidue.from_file('medium_name.hdf5')
 {% endhighlight %}
 {% include copy-button.html %}</div>
+
+To use this medium via the web GUI, you have two options: 
+
+(a): open the "Material Utilities", select the "Private Library", and click the "Upload Material" button; 
+
+(b): in the workbench, create a new medium and choose the "Import Material" option in the "Add Medium" panel.

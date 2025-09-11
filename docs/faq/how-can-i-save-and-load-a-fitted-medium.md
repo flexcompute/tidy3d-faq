@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-09-05 17:21:49 | Mediums |
+| 2025-09-11 18:26:45 | Mediums |
 
 
 After fitting a medium, as described [here](https://docs.flexcompute.com/projects/tidy3d/en/stable/notebooks/Fitting.html), it is possible to save the fitted medium as an hdf5 and save time when using it in another model. To save the file, just use the `.to_file` method:
@@ -24,3 +24,9 @@ loaded_medium = td.PoleResidue.from_file('medium_name.hdf5')
 ```
 
 
+
+To use this medium via the web GUI, you have two options: 
+
+(a): open the "Material Utilities", select the "Private Library", and click the "Upload Material" button; 
+
+(b): in the workbench, create a new medium and choose the "Import Material" option in the "Add Medium" panel.
