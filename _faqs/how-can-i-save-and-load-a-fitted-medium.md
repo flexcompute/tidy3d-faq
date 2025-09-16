@@ -1,10 +1,10 @@
 ---
 title: How Can I Save and Load a Fitted Medium?
-date: 2025-09-11 18:26:45
+date: 2025-09-16 12:38:02
 enabled: true
 category: "Mediums"
 ---
-After fitting a medium, as described [here](https://docs.flexcompute.com/projects/tidy3d/en/stable/notebooks/Fitting.html){: .color-primary-hover}, it is possible to save the fitted medium as an hdf5 and save time when using it in another model. To save the file, just use the `.to_file` method:
+After fitting a medium, as described [here](https://docs.flexcompute.com/projects/tidy3d/en/stable/notebooks/Fitting.html){: .color-primary-hover}, it is possible to save the fitted medium as an hdf5 file and save time when using it in another model. To save the file, just use the `.to_file` method:
 
 <div markdown class="code-snippet">
 {% highlight python %}
