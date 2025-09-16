@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-09-11 18:22:50 | Web API |
+| 2025-09-16 13:50:36 | Web API |
 
 
 The [`web.load`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.load.html) function is a convenient utility in Tidy3D that allows you to **download and load simulation results** directly into a [SimulationData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.components.data.sim_data.SimulationData.html), [HeatChargeSimulationData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeSimulationData.html), or [ModeSolverData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolverData.html), depending on the simulation. 
@@ -14,6 +14,12 @@ It is particularly useful for retrieving results from simulations created and ru
 - **task_id (str)**: Unique identifier for the simulation task (returned when uploading).
 - **path (str)**: Local path where the results file (`.hdf5`) will be saved. Default: `"simulation_data.hdf5"`.
 - **replace_existing (bool)**: If `True`, overwrites existing files at the same path.
+
+## Notes
+
+The *task_id* can be obtained in the GUI under the **Simulation Assets** tab, or from the **Action** menu on the [folder](https://tidy3d.simulation.cloud/home) page.
+
+For more information and templates on loading and visualizing data using `web.load`, see [this example](None).
 
 ---
 

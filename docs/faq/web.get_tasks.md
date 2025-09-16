@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-09-11 18:22:50 | Web API |
+| 2025-09-16 13:50:36 | Web API |
 
 
 [`web.get_tasks`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.get_tasks.html) is a function in `tidy3d.web.api.webapi` that **retrieves metadata about past simulation tasks** from your account. It’s useful for reviewing recent runs, checking their IDs, and organizing workflows.

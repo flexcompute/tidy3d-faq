@@ -2,10 +2,10 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-09-11 18:22:50 | Web API |
+| 2025-09-16 13:50:36 | Web API |
 
 
-[`Batch`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Batch.html) is a container for submitting, running, monitoring, and downloading **multiple simulations** on the Tidy3D cloud in one go. It’s similar to a [`web.Job`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Job.html), but for a whole set of tasks (FDTD, Heat/Charge, EME, Mode solver, etc.) that run in parallel.
+[`Batch`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Batch.html) is a container for submitting, running, monitoring, and downloading **multiple simulations** on the Tidy3D cloud in one go. It’s similar to a [`web.Job`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Job.html), but for a whole set of simulations (FDTD, Heat/Charge, EME, Mode solver, etc.) that run in parallel.
 
 ## Estimating cost
 

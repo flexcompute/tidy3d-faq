@@ -1,6 +1,6 @@
 ---
 title: Web.load?
-date: 2025-09-11 18:22:50
+date: 2025-09-16 13:50:36
 enabled: true
 category: "Web API"
 ---
@@ -13,6 +13,12 @@ It is particularly useful for retrieving results from simulations created and ru
 - **task_id (str)**: Unique identifier for the simulation task (returned when uploading).
 - **path (str)**: Local path where the results file (`.hdf5`) will be saved. Default: `"simulation_data.hdf5"`.
 - **replace_existing (bool)**: If `True`, overwrites existing files at the same path.
+
+## Notes
+
+The *task_id* can be obtained in the GUI under the **Simulation Assets** tab, or from the **Action** menu on the [folder](https://tidy3d.simulation.cloud/home){: .color-primary-hover} page.
+
+For more information and templates on loading and visualizing data using `web.load`, see [this example](None){: .color-primary-hover}.
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: Web.job?
-date: 2025-09-11 18:22:50
+date: 2025-09-16 13:50:36
 enabled: true
 category: "Web API"
 ---
 [`web.Job`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Job.html){: .color-primary-hover} is a lightweight container that represents a single simulation task on the Tidy3D cloud. It keeps track of the task ID, manages upload/start/monitor/download, and lets you save/load the job metadata without manually handling the original Simulation or task ID.
 
-Use Job when working with one simulation and you want to track the task ID, conveniently manage tasks (upload/start/monitor/download), and have the ability to save/restore your job state cleanly across sessions.
+Use Job when working with one simulation and you want to track the task ID, conveniently manage simulations (upload/start/monitor/download), and have the ability to save/restore your job state cleanly across sessions.
 
 Minimal Example
 
