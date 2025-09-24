@@ -16,3 +16,4 @@ Inverse Design
    faq/how-do-i-include-fabrication-constraints-in-adjoint-topology-optimization.md
    faq/how-do-i-include-fabrication-constraints-in-adjoint-level-set-optimization.md
    faq/how-do-i-export-the-final-inverse-design-structure-to-gds.md
+   faq/how-do-i-use-anisotropic-medium.md
