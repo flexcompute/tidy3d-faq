@@ -24,4 +24,5 @@ FAQ |:mag_right:|
    sources
    structures
    symmetry
+   web-api (copy)
    web-api

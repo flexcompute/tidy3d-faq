@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-09-29 11:20:20 | Web API |
+| 2025-09-29 11:29:13 | Web API |
 
 
 The [`web.delete`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.delete.html) function in Tidy3D is used to remove simulation stored on the server. This is useful for managing storage and ensuring that old or unnecessary tasks don’t take up space.
