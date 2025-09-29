@@ -13,3 +13,7 @@ Web API
    faq/web.estimate_cost.md
    faq/td.SimulationData.from_file.md
    faq/web.load.md
+   faq/web.get_info.md
+   faq/web.run_async.md
+   faq/web.delete.md
+   faq/web.delete_old.md

@@ -351,6 +351,11 @@
       "_faqs/web.account.md",
       "_faqs/web.estimate_cost.md",
       "_faqs/td.SimulationData.from_file.md",
+      "_faqs/web.load.md",
+      "_faqs/web.get_info.md",
+      "_faqs/web.run_async.md",
+      "_faqs/web.delete.md",
+      "_faqs/web.delete_old.md"
       "_faqs/web.load.md"
     ]
   }
