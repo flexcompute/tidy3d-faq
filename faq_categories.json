@@ -356,6 +356,7 @@
       "_faqs/web.run_async.md",
       "_faqs/web.delete.md",
       "_faqs/web.delete_old.md"
+      "_faqs/web.load.md"
     ]
   }
 ]
