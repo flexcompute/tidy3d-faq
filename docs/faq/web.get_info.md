@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-09-26 17:01:09 | Web API |
+| 2025-09-29 11:20:20 | Web API |
 
 
 The [`web.get_info`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.get_info.html) function retrieves detailed information about a simulation. 

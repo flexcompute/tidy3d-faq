@@ -1,13 +1,13 @@
 ---
 title: Web.delete?
-date: 2025-09-26 17:01:09
+date: 2025-09-29 11:20:20
 enabled: true
 category: "Web API"
 ---
-The [`web.delete`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.delete.html){: .color-primary-hover} function in Tidy3D is used to remove simulation data stored on the server. This is useful for managing storage and ensuring that old or unnecessary tasks don’t take up space.
+The [`web.delete`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.delete.html){: .color-primary-hover} function in Tidy3D is used to remove simulation stored on the server. This is useful for managing storage and ensuring that old or unnecessary tasks don’t take up space.
 
 ## What does it do?
-Given a *task_id*, the function deletes the corresponding simulation data. You can choose to delete only the specific version of the task or all versions within the same task group.
+Given a *task_id*, the function deletes the corresponding simulation. You can choose to delete only the specific version of the task or all versions within the same task group.
 
 ## Example
 <div markdown class="code-snippet">
