@@ -17,3 +17,4 @@ Web API
    faq/web.run_async.md
    faq/web.delete.md
    faq/web.delete_old.md
+   faq/web.load.md

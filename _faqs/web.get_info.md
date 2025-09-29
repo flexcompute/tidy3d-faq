@@ -1,6 +1,6 @@
 ---
 title: Web.get_info?
-date: 2025-09-29 11:29:13
+date: 2025-09-29 13:30:44
 enabled: true
 category: "Web API"
 ---
