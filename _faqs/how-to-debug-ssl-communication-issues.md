@@ -10,8 +10,7 @@ category: "Simulation Troubleshoot"
 
 Users operating within corporate networks, through a VPN, or behind a proxy server may sometimes encounter SSL errors when running the `tidy3d` python client in their local machines. **Note you can always use the python client with [our cloud-hosted notebook server](https://tidy3d.simulation.cloud/).**
 
-These errors can occur because the corporsate network's security measures intercept and re-encrypt HTTPS traffic required for the `tidy3d` python client to communicate with the simulation servers.
-
+These errors can occur because the corporate network's security measures, intercepts, and re-encrypts HTTPS traffic.
 
 A common error message looks like this:
 
@@ -30,7 +29,16 @@ pip install pip-system-certs
 ```
 If this doesn't work, proceed with the rest of this guide.
 
-## Step 1: Verify Your Environment and Connectivity
+## Step 1: The Recommended & Most Secure Solution
+
+The most robust and secure solution is to have your IT department add the Tidy3D SSL certificate to your system's trust store. This allows your machine to verify our servers' identity correctly without disabling security features.
+
+**Action**: Please ask your network administrator to whitelist the API endpoint `https://tidy3d-api.simulation.cloud` and install the following root certificate [https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem](https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem)
+
+If these steps do not resolve your issue, please contact our support team and provide the logs from the commands you have tried.
+
+
+## Step 2: Verify Your Environment and Connectivity
 
 Before changing any settings, let's make sure you can reach the Tidy3D servers.
 
@@ -65,10 +73,11 @@ Before changing any settings, let's make sure you can reach the Tidy3D servers.
 
   **Expected output:** A `401 Unauthorized` error message. This is good news; it means you can reach our API server, and the problem is likely with authentication or SSL certificate verification.
 
+Note that many networks can block ping messages so this is not a foolproof check.
 
-## Step 2: Disable SSL Verification (Quick Workaround)
+## Step 3: Disable SSL Verification (Quick Workaround)
 
-As a temporary solution, you can instruct `tidy3d` to bypass SSL certificate verification. This is not ideal for security but is useful for confirming the source of the problem.
+**As a temporary solution**, you can instruct `tidy3d` to bypass SSL certificate verification. This is not ideal for security but is useful for confirming the source of the problem.
 
 This is done by setting the `TIDY3D_SSL_VERIFY` environment variable to `false`.
 
@@ -87,6 +96,8 @@ This is done by setting the `TIDY3D_SSL_VERIFY` environment variable to `false`.
   ```bash
   export TIDY3D_SSL_VERIFY="false"
   ```
+
+Note thet the user could run into unexpected server communication issues by disabling SSL. This is not recommended.
 
 #### Verifying the Environment Variable:
 
@@ -107,7 +118,7 @@ print(f"TIDY3D_SSL_VERIFY is set to: {os.getenv('TIDY3D_SSL_VERIFY')}")
 
 When you run your script, you should see the confirmation printed. If you see `None` or an empty string, the variable was not set correctly in your current session.
 
-## Step 3: Run a Diagnostic Script
+## Step 4: Run a Diagnostic Script
 
 If the issue persists, running a minimal script can help isolate the problem to the `requests` library, which `tidy3d` uses for communication.
 
@@ -158,12 +169,3 @@ except Exception as e:
 ```
 
 With `TIDY3D_SSL_VERIFY` set to `false` and `TIDY3D_API_KEY` set correctly, the expected output is a `status code: 200` and content containing your API key. You will also see an `InsecureRequestWarning` if you don't suppress it.
-
-
-## Step 4: The Recommended & Most Secure Solution
-
-The most robust and secure solution is to have your IT department add the Tidy3D SSL certificate to your system's trust store. This allows your machine to verify our servers' identity correctly without disabling security features.
-
-**Action**: Please ask your network administrator to whitelist the API endpoint `https://tidy3d-api.simulation.cloud` and install the following root certificate [https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem](https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem)
-
-If these steps do not resolve your issue, please contact our support team and provide the logs from the commands you have tried.
