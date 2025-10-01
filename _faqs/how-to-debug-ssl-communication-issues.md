@@ -153,10 +153,11 @@ if not ssl_verify_setting:
     print("InsecureRequestWarning suppressed.")
 
 try:
-    resp = requests.get(
-        f"{Env.current.web_api_endpoint}/apikey", auth=auth, verify=ssl_verify_setting
-    )
-
+    req = requests.Request("GET", f"{Env.current.web_api_endpoint}/apikey")
+    auth(req)
+    resp = requests.get(req.url, headers=req.headers, verify=ssl_verify_setting)
+    
+    print(f"Response: {resp}")
     print(f"Status Code: {resp.status_code}")
     print(f"Response Content: {resp.content}")
 
