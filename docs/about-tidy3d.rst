@@ -13,3 +13,4 @@ About Tidy3D
    faq/how-many-cpu-hours-is-one-flexcredit-comparable-to.md
    faq/does-tidy3d-have-a-graphical-user-interface.md
    faq/can-i-do-a-free-trial-to-evaluate-the-capabilities-of-tidy3d-before-purchasing-it.md
+   faq/how-to-manage-storage-and-download-simulation-data-in-tidy3d.md
