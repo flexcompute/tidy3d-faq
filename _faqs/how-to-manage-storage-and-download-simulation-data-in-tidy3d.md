@@ -1,6 +1,6 @@
 ---
 title: How to Manage Storage and Download Simulation Data in Tidy3d?
-date: 2025-12-17 15:49:12
+date: 2025-12-17 16:23:41
 enabled: true
 category: "About Tidy3D"
 ---
@@ -16,7 +16,7 @@ You must delete older simulation files from your cloud storage. You can do this 
 
 ## **How do I delete simulations using the GUI?**
 
-1. Go to your **Account Center**:  
+1. Go to your **Workspace**:  
    <https://tidy3d.simulation.cloud/folders>
 
 2. Select the simulation files you want to remove.

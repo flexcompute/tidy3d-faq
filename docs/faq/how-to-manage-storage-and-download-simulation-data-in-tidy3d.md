@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2025-12-17 15:49:12 | About Tidy3D |
+| 2025-12-17 16:23:41 | About Tidy3D |
 
 
 When running simulations in Tidy3D, your cloud storage may eventually reach its limit. This FAQ explains how to clean up space, download your data, and manage simulation files using both the GUI and the Python API.
@@ -11,7 +11,7 @@ When running simulations in Tidy3D, your cloud storage may eventually reach its 
 
 ## **How do I delete simulations using the GUI?**
 
-1. Go to your **Account Center**:  
+1. Go to your **Workspace**:  
    <https://tidy3d.simulation.cloud/folders>
 
 2. Select the simulation files you want to remove.
