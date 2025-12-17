@@ -11,4 +11,3 @@ Simulation Troubleshoot
    faq/can-i-have-structures-larger-than-the-simulation-domain.md
    faq/why-can-i-not-change-tidy3d-instances-after-they-are-created.md
    faq/why-are-some-materials-not-showing-up.md
-   faq/how-to-debug-ssl-communication-issues.md
