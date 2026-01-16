@@ -71,7 +71,8 @@
       "_faqs/should-i-make-sure-that-fields-have-fully-decayed-by-the-end-of-the-simulation.md",
       "_faqs/can-i-have-structures-larger-than-the-simulation-domain.md",
       "_faqs/why-can-i-not-change-tidy3d-instances-after-they-are-created.md",
-      "_faqs/why-are-some-materials-not-showing-up.md"
+      "_faqs/why-are-some-materials-not-showing-up.md",
+      "_faqs/why-does-the-kernel-crash-sometimes-when-using-the-web-based-python-notebook.md
     ]
   },
   {
