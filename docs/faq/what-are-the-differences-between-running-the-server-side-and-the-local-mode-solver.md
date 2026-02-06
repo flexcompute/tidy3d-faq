@@ -5,7 +5,7 @@
 | 2023-12-18 17:45:50 | Mode Solver |
 
 
-The server-side <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a> includes  group index calculation and subpixel-smoothing to improve solver accuracy.  For example:
+The server-side <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a> includes subpixel-smoothing to improve solver accuracy. For example:
 
  
 
@@ -31,7 +31,7 @@ mode_data = run_mode_solver(mode_solver)
 
 
 
-When using the local version, the solver will run on your own computer and will not require any credits. You can run the local mode solver version using:
+When using the local version, the solver will run on your own computer and will not require any credits. If the `tidy3d-extras` package is installed (`pip install "tidy3d[extras]"`), the local solver will also use subpixel averaging for improved accuracy. You can control this with `config.simulation.use_local_subpixel`: set to `True` to force it on, `False` to force it off, or leave it as `None` (the default) to automatically enable it when `tidy3d-extras` is available. You can run the local mode solver version using:
 
 ```python
 from tidy3d.plugins.mode import ModeSolver

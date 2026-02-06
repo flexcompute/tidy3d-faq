@@ -26,9 +26,9 @@ _inputs:
         text:
           - key: category_name
 ---
-<div>The server-side <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a>&nbsp;includes&nbsp; group index calculation and subpixel-smoothing to improve solver accuracy.&nbsp; For example:</div>
+<div>The server-side <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a>&nbsp;includes subpixel-smoothing to improve solver accuracy.&nbsp; For example:</div>
 
-<div> </div>
+<div> </div>
 
 <div markdown class="code-snippet">{% highlight python %}
 from tidy3d.plugins.mode import ModeSolver
@@ -49,7 +49,7 @@ mode_data = run_mode_solver(mode_solver)
 {% endhighlight %}
 {% include copy-button.html %}</div>
 
-<div><p>When using the local version, the solver will run on your own computer and will not require any credits. You can run the local mode solver version using:</p><div markdown class="code-snippet">{% highlight python %}
+<div><p>When using the local version, the solver will run on your own computer and will not require any credits. If the <code>tidy3d-extras</code> package is installed (<code>pip install "tidy3d[extras]"</code>), the local solver will also use subpixel averaging for improved accuracy. You can control this with <code>config.simulation.use_local_subpixel</code>: set to <code>True</code> to force it on, <code>False</code> to force it off, or leave it as <code>None</code> (the default) to automatically enable it when <code>tidy3d-extras</code> is available. You can run the local mode solver version using:</p><div markdown class="code-snippet">{% highlight python %}
 from tidy3d.plugins.mode import ModeSolver
 
 # Build the mode solver.
