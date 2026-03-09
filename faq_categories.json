@@ -11,8 +11,9 @@
       "_faqs/what-is-a-flexcredit.md",
       "_faqs/how-many-cpu-hours-is-one-flexcredit-comparable-to.md",
       "_faqs/does-tidy3d-have-a-graphical-user-interface.md",
-      "_faqs/can-i-do-a-free-trial-to-evaluate-the-capabilities-of-tidy3d-before-purchasing-it.md",
-      "_faqs/how-to-manage-storage-and-download-simulation-data-in-tidy3d.md"
+	"_faqs/can-i-do-a-free-trial-to-evaluate-the-capabilities-of-tidy3d-before-purchasing-it.md",
+	"_faqs/how-to-manage-storage-and-download-simulation-data-in-tidy3d.md",
+	"_faqs/why-am-i-getting-a-storage-error.md"
     ]
   },
   {
@@ -73,7 +74,7 @@
       "_faqs/can-i-have-structures-larger-than-the-simulation-domain.md",
       "_faqs/why-can-i-not-change-tidy3d-instances-after-they-are-created.md",
       "_faqs/why-are-some-materials-not-showing-up.md",
-      "_faqs/why-does-the-kernel-crash-sometimes-when-using-the-web-based-python-notebook.md"
+	"_faqs/why-does-the-kernel-crash-sometimes-when-using-the-web-based-python-notebook.md"
     ]
   },
   {
