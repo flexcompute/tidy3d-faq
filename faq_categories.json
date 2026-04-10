@@ -11,9 +11,9 @@
       "_faqs/what-is-a-flexcredit.md",
       "_faqs/how-many-cpu-hours-is-one-flexcredit-comparable-to.md",
       "_faqs/does-tidy3d-have-a-graphical-user-interface.md",
-	"_faqs/can-i-do-a-free-trial-to-evaluate-the-capabilities-of-tidy3d-before-purchasing-it.md",
-	"_faqs/how-to-manage-storage-and-download-simulation-data-in-tidy3d.md",
-	"_faqs/why-am-i-getting-a-storage-error.md"
+      "_faqs/can-i-do-a-free-trial-to-evaluate-the-capabilities-of-tidy3d-before-purchasing-it.md",
+      "_faqs/how-to-manage-storage-and-download-simulation-data-in-tidy3d.md",
+      "_faqs/why-am-i-getting-a-storage-error.md"
     ]
   },
   {
@@ -58,9 +58,9 @@
     "faqs": [
       "_faqs/how-do-i-run-a-parameter-sweep.md",
       "_faqs/how-do-i-submit-multiple-simulations.md",
-      "_faqs/how-to-load-a-batch-result.md",
-      "_faqs/how-do-i-loop-through-tidy3d-web-batchdata-without-loading-all-of-the-data-into-memory.md",
-      "_faqs/how-do-i-save-or-load-a-tidy3d-web-batch-so-i-can-work-with-it-later.md"
+      "_faqs/how-to-iterate-through-results-from-multiple-simulations-without-loading-all-of-the-data-into-memory.md",
+      "_faqs/how-do-I-abort-multiple-simulations-job.md",
+      "_faqs/how-do-i-save-or-load-a-tidy3d-parallel-job-so-i-can-work-with-it-later.md"
     ]
   },
   {
@@ -74,7 +74,7 @@
       "_faqs/can-i-have-structures-larger-than-the-simulation-domain.md",
       "_faqs/why-can-i-not-change-tidy3d-instances-after-they-are-created.md",
       "_faqs/why-are-some-materials-not-showing-up.md",
-	"_faqs/why-does-the-kernel-crash-sometimes-when-using-the-web-based-python-notebook.md"
+      "_faqs/why-does-the-kernel-crash-sometimes-when-using-the-web-based-python-notebook.md"
     ]
   },
   {
@@ -361,6 +361,17 @@
       "_faqs/web.delete.md",
       "_faqs/web.delete_old.md",
       "_faqs/web.load.md"
+    ]
+  },
+  {
+    "category": "Batch Simulations (Legacy)",
+    "id": "batch-simulations-(legacy)",
+    "faqs": [
+      "_faqs/how-do-i-save-or-load-a-tidy3d-web-batch-so-i-can-work-with-it-later.md",
+      "_faqs/how-do-i-submit-batch-simulations.md",
+      "_faqs/how-to-load-a-batch-result.md",
+      "_faqs/how-do-i-run-a-batch-simulation.md",
+      "_faqs/how-do-i-loop-through-tidy3d-web-batchdata-without-loading-all-of-the-data-into-memory.md"
     ]
   }
 ]

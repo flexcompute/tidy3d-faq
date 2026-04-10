@@ -5,6 +5,7 @@ FAQ |:mag_right:|
    :maxdepth: 2
 
    about-tidy3d
+   batch-simulations-(legacy)
    boundary-conditions
    charge
    data-visualization-and-postprocessing

@@ -1,41 +1,58 @@
 ---
-title: How do I run a parameter sweep?
-date: 2023-12-04 18:41:54
+title: How Do I Run a Parameter Sweep?
+date: 2026-04-10 16:29:38
 enabled: true
 category: "Parameter Sweep"
 ---
-<div>To submit multiple simulations and run them concurrently in the server, you can create a&nbsp;<a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Batch.html">tidy3d.web.Batch</a> object including all the simulations you want to run. Then, use&nbsp;<code>tidy3d.web.Batch.run()</code> to upload, run, and get the simulations results in a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.BatchData.html">tidy3d.web.BatchData</a> object. For example:</div>
+# How do I run a parameter sweep?
 
-<div><div><div markdown class="code-snippet">{% highlight python %}
+[`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.run.run.html){: .color-primary-hover} is the unified interface for running simulations on the Tidy3D cloud.
 
-# Create a dictionary including all the simulations.
-sims = {"sim_1": sim_1, "sim_2": sim_2, "sim_3": sim_3}
+For parameter sweeps and multi-simulation workflows, `web.run` accepts not only a single simulation, but also dictionaries, lists, tuples, and nested combinations of these.
 
-# Build a Batch object.
-batch = tidy3d.web.Batch(simulations=sims, verbose=True)
+As shown in [ParameterScanWebRun.ipynb](https://www.flexcompute.com/tidy3d/examples/notebooks/ParameterScanWebRun){: .color-primary-hover}, using a dictionary is convenient because each dictionary key is preserved as the task name in the returned results mapping.
 
-# Run all the simulations and get the results.
-batch_results = batch.run(path_dir="data")
+## When should I use it?
 
+- Parameter sweeps
+- Design of experiments workflows
+- Any scripted workflow involving many related simulations
+
+## Running many simulations
+
+Create a dictionary of simulations and pass it directly to `web.run`:
+
+<div markdown class="code-snippet">
+{% highlight python %}
+import tidy3d as td
+from tidy3d import web
+
+sims = {
+    "run_a": sim_a,
+    "run_b": sim_b,
+}
+
+results = web.run(sims, path = 'sweep')
 {% endhighlight %}
-{% include copy-button.html %}</div></div></div>
+{% include copy-button.html %}</div>
 
-<div>Alternatively, you can use the&nbsp;<a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.asynchronous.run_async.html">tidy3d.web.run_async</a>, which submits and runs multiple simulations using only one command.&nbsp;</div>
+Here, web.run handles submission, monitoring, and loading of all simulations in one call.
 
-<div><div><div markdown class="code-snippet">{% highlight python %}
+## Accessing results
 
-# Create a dictionary including all the simulations.
-sims = {"sim_1": sim_1, "sim_2": sim_2, "sim_3": sim_3}
+The returned object can be indexed by task name or iterated over:
 
-# Run all the simulations and get the results.
-batch_results = batch.run_async(sims, path_dir="data")
+<div markdown class="code-snippet">
+{% highlight python %}
+sim_data_a = results["run_a"]
 
+for task_name, sim_data in results.items():
+    print(task_name, sim_data)
 {% endhighlight %}
-{% include copy-button.html %}</div></div><p>After running the simulations, you can get the results from the&nbsp;<a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.BatchData.html">tidy3d.web.BatchData</a>&nbsp;object directly, using for example &nbsp;<code>sim_data_1 = batch_results["sim_1"]</code>. Or iterating over it in a loop, as below:</p><div markdown class="code-snippet">{% highlight python %}
+{% include copy-button.html %}</div>
 
-sim_data = []
-for task_name, sim_data in batch_results.items():
-  sim_data.append(sim_data)
+This makes web.run a natural choice for parameter sweeps where task naming is derived from parameter values.
 
-{% endhighlight %}
-{% include copy-button.html %}</div><p>In <a href="https://www.flexcompute.com/tidy3d/examples/notebooks/ParameterScan/">this notebook</a> you will find a detailed example of how to run parameter sweeps.v</p></div>
+### Related note
+
+Older workflows may use tidy3d.web.Batch for multi-simulation execution. web.run provides a simpler unified interface for the workflow shown in [ParameterScanWebRun.ipynb](https://www.flexcompute.com/tidy3d/examples/notebooks/ParameterScan){: .color-primary-hover}.

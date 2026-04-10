@@ -1,45 +1,63 @@
-# How do I submit multiple simulations?
+# How Do I Submit Multiple Simulations?
 
 | Date       | Category    |
 |------------|-------------|
-| 2023-12-04 14:46:02 | Parameter Sweep |
+| 2026-04-10 16:29:38 | Parameter Sweep |
 
 
-To submit multiple simulations and run them concurrently in the server, you can create a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Batch.html">tidy3d.web.Batch</a> object including all the simulations you want to run. Then, use <code>tidy3d.web.Batch.run()</code> to upload, run, and get the simulations results in a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.BatchData.html">tidy3d.web.BatchData</a> object. For example:
+# How do I submit multiple simulations?
 
-```python
+[`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.run.run.html) is the unified interface for running simulations on the Tidy3D cloud.
 
-# Create a dictionary including all the simulations.
-sims = {"sim_1": sim_1, "sim_2": sim_2, "sim_3": sim_3}
+For parameter scans and multi-simulation workflows, `web.run` accepts not only a single simulation, but also dictionaries, lists, tuples, and nested combinations of these.
 
-# Build a Batch object.
-batch = tidy3d.web.Batch(simulations=sims, verbose=True)
+As shown in [ParameterScanWebRun.ipynb](https://www.flexcompute.com/tidy3d/examples/notebooks/ParameterScanWebRun), using a dictionary is convenient because each dictionary key is preserved as the task name in the returned results mapping.
 
-# Run all the simulations and get the results.
-batch_results = batch.run(path_dir="data")
+## When should I use it?
 
-```
+- Parameter sweeps
+- Design-of-experiments workflows
+- Any scripted workflow involving many related simulations
 
-Alternatively, you can use the <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.asynchronous.run_async.html">tidy3d.web.run_async</a>, which submits and runs multiple simulations using only one command. 
+## Running many simulations
 
-```python
+Create a dictionary of simulations and pass it directly to `web.run`:
 
-# Create a dictionary including all the simulations.
-sims = {"sim_1": sim_1, "sim_2": sim_2, "sim_3": sim_3}
 
-# Run all the simulations and get the results.
-batch_results = batch.run_async(sims, path_dir="data")
-
-```
-
-After running the simulations, you can get the results from the <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.BatchData.html">tidy3d.web.BatchData</a> object directly, using for example  <code>sim_data_1 = batch_results["sim_1"]</code>. Or iterating over it in a loop, as below:
 
 ```python
+import tidy3d as td
+from tidy3d import web
 
-sim_data = []
-for task_name, sim_data in batch_results.items():
-  sim_data.append(sim_data)
+sims = {
+    "run_a": sim_a,
+    "run_b": sim_b,
+}
 
+results = web.run(sims, verbose=True)
 ```
 
-In <a target="_blank" rel="noopener" href="https://www.flexcompute.com/tidy3d/examples/notebooks/ParameterScan/">this notebook</a>, you will find a detailed example of how to run parameter sweeps.
+
+
+Here, `web.run` handles submission, monitoring, and loading of all simulations in one call.
+
+## Accessing results
+
+The returned object can be indexed by task name or iterated over:
+
+
+
+```python
+sim_data_a = results["run_a"]
+
+for task_name, sim_data in results.items():
+    print(task_name, sim_data)
+```
+
+
+
+This makes `web.run` a natural choice for parameter scans where task names are derived from parameter values.
+
+### Related note
+
+Older workflows may use `tidy3d.web.Batch` for multi-simulation execution. `web.run` provides a simpler, unified interface for the workflow shown in [ParameterScanWebRun.ipynb](https://www.flexcompute.com/tidy3d/examples/notebooks/ParameterScan).
