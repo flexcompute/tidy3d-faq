@@ -2,7 +2,7 @@
 title: How to load a batch result?
 date: 2023-12-04 18:41:54
 enabled: true
-category: "Batch Simulations (Legacy)"
+category: "Parameter Sweep (Legacy)"
 ---
 When a batch is created, a `batch.hdf5` file will be created automatically. Users can use this file to collect all the simulation results from the batch. First, load the `batch.hdf5` file by
 

@@ -1,5 +1,5 @@
-Batch Simulations (Legacy)
-==========================
+Parameter Sweep (Legacy)
+========================
 
 .. toctree::
    :maxdepth: 2

@@ -5,7 +5,6 @@ FAQ |:mag_right:|
    :maxdepth: 2
 
    about-tidy3d
-   batch-simulations-(legacy)
    boundary-conditions
    charge
    data-visualization-and-postprocessing
@@ -17,6 +16,7 @@ FAQ |:mag_right:|
    mediums
    mode-solver
    monitors
+   parameter-sweep-(legacy)
    parameter-sweep
    resonance-finder
    scattering-matrix

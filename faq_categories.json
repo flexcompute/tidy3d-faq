@@ -60,7 +60,8 @@
       "_faqs/how-do-i-submit-multiple-simulations.md",
       "_faqs/how-to-iterate-through-results-from-multiple-simulations-without-loading-all-of-the-data-into-memory.md",
       "_faqs/how-do-I-abort-multiple-simulations-job.md",
-      "_faqs/how-do-i-save-or-load-a-tidy3d-parallel-job-so-i-can-work-with-it-later.md"
+      "_faqs/how-do-i-save-or-load-a-tidy3d-parallel-job-so-i-can-work-with-it-later.md",
+      "_faqs/how-can-i-estimate-the-cost-of-a-parameter-sweep.md"
     ]
   },
   {
@@ -364,8 +365,8 @@
     ]
   },
   {
-    "category": "Batch Simulations (Legacy)",
-    "id": "batch-simulations-(legacy)",
+    "category": "Parameter Sweep (Legacy)",
+    "id": "parameter-sweep-(legacy)",
     "faqs": [
       "_faqs/how-do-i-save-or-load-a-tidy3d-web-batch-so-i-can-work-with-it-later.md",
       "_faqs/how-do-i-submit-batch-simulations.md",

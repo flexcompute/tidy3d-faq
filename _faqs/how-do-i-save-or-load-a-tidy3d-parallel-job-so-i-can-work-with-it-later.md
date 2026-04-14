@@ -1,6 +1,6 @@
 ---
 title: How Do I Save or Load a Tidy3d Parallel Job so I Can Work with It Later?
-date: 2026-04-10 16:29:38
+date: 2026-04-14 14:22:09
 enabled: true
 category: "Parameter Sweep"
 ---

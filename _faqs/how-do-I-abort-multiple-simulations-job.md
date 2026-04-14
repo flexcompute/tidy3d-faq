@@ -1,6 +1,6 @@
 ---
 title: How Do I Abort Multiple Simulations Job?
-date: 2026-04-10 16:29:38
+date: 2026-04-14 14:22:09
 enabled: true
 category: "Parameter Sweep"
 ---

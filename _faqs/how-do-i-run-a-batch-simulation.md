@@ -2,7 +2,7 @@
 title: How do I run a parameter sweep?
 date: 2023-12-04 18:41:54
 enabled: true
-category: "Batch Simulations (Legacy)"
+category: "Parameter Sweep (Legacy)"
 ---
 <div>To submit multiple simulations and run them concurrently in the server, you can create a&nbsp;<a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Batch.html">tidy3d.web.Batch</a> object including all the simulations you want to run. Then, use&nbsp;<code>tidy3d.web.Batch.run()</code> to upload, run, and get the simulations results in a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.BatchData.html">tidy3d.web.BatchData</a> object. For example:</div>
 
