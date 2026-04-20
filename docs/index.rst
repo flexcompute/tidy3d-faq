@@ -16,6 +16,7 @@ FAQ |:mag_right:|
    mediums
    mode-solver
    monitors
+   parameter-sweep-(legacy)
    parameter-sweep
    resonance-finder
    scattering-matrix
