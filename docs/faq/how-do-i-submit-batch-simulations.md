@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2023-12-04 14:46:02 | Batch Simulations (Legacy) |
+| 2023-12-04 14:46:02 | Parameter Sweep (Legacy) |
 
 
 To submit multiple simulations and run them concurrently in the server, you can create a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Batch.html">tidy3d.web.Batch</a> object including all the simulations you want to run. Then, use <code>tidy3d.web.Batch.run()</code> to upload, run, and get the simulations results in a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.BatchData.html">tidy3d.web.BatchData</a> object. For example:

@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2023-12-04 18:41:54 | Batch Simulations (Legacy) |
+| 2023-12-04 18:41:54 | Parameter Sweep (Legacy) |
 
 
 When a batch is created, a `batch.hdf5` file will be created automatically. Users can use this file to collect all the simulation results from the batch. First, load the `batch.hdf5` file by
