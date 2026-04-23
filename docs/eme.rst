@@ -9,3 +9,4 @@ EME
    faq/how-can-i-simulate-bent-waveguides-with-eme.md
    faq/how-do-i-set-an-eme-simulation.md
    faq/what-is-eme.md
+   faq/how-do-i-simulate-a-bent-anisotropic-waveguide-with-eme.md
