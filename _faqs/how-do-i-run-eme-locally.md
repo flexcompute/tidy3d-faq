@@ -71,6 +71,18 @@ iface_sms = [
 smatrix = sim.compute_smatrix(cell_overlaps, cell_sms, iface_sms)
 ```
 
+To express the local S-matrix in another modal basis after `propagate`, `propagate_from_overlaps`, or `compute_smatrix`, use [`EMESimulation.smatrix_in_basis`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.EMESimulation.html#tidy3d.EMESimulation.smatrix_in_basis){: target="_blank" rel="noopener"} with the original port mode data and the replacement modes:
+
+```python
+smatrix_custom = sim.smatrix_in_basis(
+    smatrix,
+    port_modes=(mode_data[0], mode_data[-1]),
+    modes2=output_modes,
+)
+```
+
+Omit `modes1` or `modes2` for ports that should stay in the EME port-mode basis. For remote EME runs, use [`EMESimulationData.smatrix_in_basis`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.EMESimulationData.html#tidy3d.EMESimulationData.smatrix_in_basis){: target="_blank" rel="noopener"} on the returned simulation data instead.
+
 ### Limitations
 
 The local path only produces the device S-matrix. `EMESimulation.monitors` (such as `EMEFieldMonitor`, `EMEModeSolverMonitor`, `EMECoefficientMonitor`) are dropped with a warning; run the simulation through the remote backend if you need monitor data.
