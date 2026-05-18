@@ -2,7 +2,7 @@
 title: How Do I Control the Local Cache in Tidy3d?
 date: 2026-05-18 15:34:34
 enabled: true
-category: "Web API"
+category: "About Tidy3D"
 ---
 # How do I control the local cache in Tidy3D?
 
@@ -10,7 +10,6 @@ You can control the local cache in Tidy3D by setting `td.config.local_cache.enab
 
 <div markdown class="code-snippet">
 {% highlight python %}
-python
 import tidy3d as td
 
 td.config.local_cache.enabled = False  # Set to True to enable it again.
@@ -21,7 +20,6 @@ Without saving, this change only applies to the current Python session. To keep 
 
 <div markdown class="code-snippet">
 {% highlight python %}
-python
 td.config.save()
 {% endhighlight %}
 {% include copy-button.html %}</div>

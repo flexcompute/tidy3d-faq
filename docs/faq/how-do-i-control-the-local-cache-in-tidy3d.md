@@ -2,7 +2,7 @@
 
 | Date       | Category    |
 |------------|-------------|
-| 2026-05-18 15:34:34 | Web API |
+| 2026-05-18 15:34:34 | About Tidy3D |
 
 
 # How do I control the local cache in Tidy3D?
@@ -12,7 +12,6 @@ You can control the local cache in Tidy3D by setting `td.config.local_cache.enab
 
 
 ```python
-python
 import tidy3d as td
 
 td.config.local_cache.enabled = False  # Set to True to enable it again.
@@ -25,7 +24,6 @@ Without saving, this change only applies to the current Python session. To keep 
 
 
 ```python
-python
 td.config.save()
 ```
 
