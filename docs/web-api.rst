@@ -18,3 +18,4 @@ Web API
    faq/web.delete.md
    faq/web.delete_old.md
    faq/web.load.md
+   faq/how-do-i-control-the-local-cache-in-tidy3d.md
