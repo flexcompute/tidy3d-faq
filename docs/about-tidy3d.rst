@@ -16,3 +16,4 @@ About Tidy3D
    faq/how-to-manage-storage-and-download-simulation-data-in-tidy3d.md
    faq/why-am-i-getting-a-storage-error.md
    faq/why-is-my-tidy3d-notebook-storage-full-if-i-do-not-see-large-files.md
+   faq/how-do-i-control-the-local-cache-in-tidy3d.md
