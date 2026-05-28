@@ -17,3 +17,4 @@ About Tidy3D
    faq/why-am-i-getting-a-storage-error.md
    faq/why-is-my-tidy3d-notebook-storage-full-if-i-do-not-see-large-files.md
    faq/how-do-i-control-the-local-cache-in-tidy3d.md
+   faq/what-are-the-hidden-files-in-the-python-web-notebook.md

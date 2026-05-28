@@ -15,7 +15,8 @@
       "_faqs/how-to-manage-storage-and-download-simulation-data-in-tidy3d.md",
       "_faqs/why-am-i-getting-a-storage-error.md",
       "_faqs/why-is-my-tidy3d-notebook-storage-full-if-i-do-not-see-large-files.md",
-      "_faqs/how-do-i-control-the-local-cache-in-tidy3d.md"
+      "_faqs/how-do-i-control-the-local-cache-in-tidy3d.md",
+      "_faqs/what-are-the-hidden-files-in-the-python-web-notebook.md"
     ]
   },
   {
