@@ -26,7 +26,11 @@ The steps to set up a Charge simulation are very similar to those for an FDTD si
   The simplest option is to use the [UniformUnstructuredGrid](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.UniformUnstructuredGrid.html){: .color-primary-hover} mesh type, where you only need to specify the grid size `dl`. The mesher will automatically generate a mesh that fits the structures while respecting the given resolution.
 
 - **Define the simulation type**  
-  Define the simulation type via the `analysis_spec` of the [HeatChargeSimulation](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeSimulation.html){: .color-primary-hover} object. Currently, only [IsothermalSteadyChargeDCAnalysis](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.IsothermalSteadyChargeDCAnalysis.html){: .color-primary-hover} is supported.
+  Define the simulation type via the `analysis_spec` of the [HeatChargeSimulation](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeSimulation.html){: .color-primary-hover} object. Several analysis types are available:
+    - [SteadyChargeDCAnalysis](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SteadyChargeDCAnalysis.html){: .color-primary-hover} — non-isothermal steady-state DC analysis, where the charge and heat equations are solved together.
+    - [IsothermalSteadyChargeDCAnalysis](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.IsothermalSteadyChargeDCAnalysis.html){: .color-primary-hover} — steady-state DC analysis at a constant temperature.
+    - [SSACAnalysis](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.SSACAnalysis.html){: .color-primary-hover} — small-signal AC analysis (non-isothermal).
+    - [IsothermalSSACAnalysis](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.IsothermalSSACAnalysis.html){: .color-primary-hover} — small-signal AC analysis at a constant temperature.
 
 - **Create the simulation object**  
   Create a [HeatChargeSimulation](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeSimulation.html){: .color-primary-hover} object.
