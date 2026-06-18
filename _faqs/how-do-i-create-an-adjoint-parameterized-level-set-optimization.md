@@ -26,7 +26,7 @@ _inputs:
 ---
 To create an adjoint parameterized level set-based optimization setup, you should use the design parameters as the control knots of a level set surface. Then, create a [CustomMedium](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.CustomMedium.html#tidy3d.CustomMedium){: .color-primary-hover} and set the permittivity values based on the zero level isocontour obtained from the level set surface. After that, include it in a [Structure](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.Structure.html){: .color-primary-hover} object.
 
-Once the simulation is defined, you can use the [web.run](https://docs.flexcompute.com/projects/tidy3d/en/v2.0.1/_autosummary/tidy3d.web.run.html){: .color-primary-hover} method to send the simulation to our servers and process the data as usual.
+Once the simulation is defined, you can use the [web.run](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html){: .color-primary-hover} method to send the simulation to our servers and process the data as usual.
 
 <div> </div>
 

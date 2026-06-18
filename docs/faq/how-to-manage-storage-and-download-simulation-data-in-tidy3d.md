@@ -27,7 +27,7 @@ When running simulations in Tidy3D, your cloud storage may eventually reach its 
 When you run a simulation using:  
 <i>web.run</i>  
 Documentation:  
-<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.run.html>
+<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html>
 
 Two things happen:
 

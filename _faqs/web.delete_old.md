@@ -4,7 +4,7 @@ date: 2025-09-29 13:30:44
 enabled: true
 category: "Web API"
 ---
-The [`web.delete_old`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.delete_old.html){: .color-primary-hover} function is used to automatically clean up older simulation tasks stored on the server. It helps manage storage by removing tasks that are no longer needed after a certain number of days.
+The [`web.delete_old`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.delete_old.html){: .color-primary-hover} function is used to automatically clean up older simulation tasks stored on the server. It helps manage storage by removing tasks that are no longer needed after a certain number of days.
 
 ## What does it do?
 Given a time threshold in days, the function deletes all tasks older than that age in a specified folder. This makes it easy to clear out outdated simulations without manually deleting them one by one.

@@ -4,7 +4,7 @@ date: 2025-09-16 13:50:36
 enabled: true
 category: "Web API"
 ---
-The [`web.load`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.load.html){: .color-primary-hover} function is a convenient utility in Tidy3D that allows you to **download and load simulation results** directly into a [SimulationData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.components.data.sim_data.SimulationData.html){: .color-primary-hover}, [HeatChargeSimulationData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeSimulationData.html){: .color-primary-hover}, or [ModeSolverData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolverData.html){: .color-primary-hover}, depending on the simulation. 
+The [`web.load`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.load.html){: .color-primary-hover} function is a convenient utility in Tidy3D that allows you to **download and load simulation results** directly into a [SimulationData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.components.data.sim_data.SimulationData.html){: .color-primary-hover}, [HeatChargeSimulationData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.HeatChargeSimulationData.html){: .color-primary-hover}, or [ModeSolverData](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolverData.html){: .color-primary-hover}, depending on the simulation.
 
 It is particularly useful for retrieving results from simulations created and run through the Tidy3D GUI or API.
 

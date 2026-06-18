@@ -6,7 +6,7 @@ category: "Parameter Sweep"
 ---
 # How do I save or load a multi-simulation task?
 
-When using [`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.run.run.html){: .color-primary-hover} on multiple simulations, a `batch.hdf5` file is automatically created at the path specified by the `path` argument of `web.run`. The default location is the current working directory.
+When using [`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html){: .color-primary-hover} on multiple simulations, a `batch.hdf5` file is automatically created at the path specified by the `path` argument of `web.run`. The default location is the current working directory.
 
 You can load the object and data by calling the `web.Batch.from_file` and `load` methods:
 

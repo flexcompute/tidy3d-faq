@@ -6,7 +6,7 @@
 
 
 
-[`web.account`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.account.html) is a helper function that retrieves **account details** for the currently authenticated user. It shows your FlexCredit balance, expiration dates, and limits on daily free simulations.
+[`web.account`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.account.html) is a helper function that retrieves **account details** for the currently authenticated user. It shows your FlexCredit balance, expiration dates, and limits on daily free simulations.
 
 ## Example
 

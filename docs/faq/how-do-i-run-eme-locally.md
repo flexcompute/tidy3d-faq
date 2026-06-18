@@ -20,7 +20,7 @@ smatrix = sim.propagate(mode_data)
 
 ### Cloud-parallel mode solves
 
-Pass the per-cell `ModeSimulation` objects to [`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.run.run.html) as a dict keyed by cell index. `web.run` preserves dict keys as task names in the returned mapping, so the results can be read back in canonical EME cell order and fed to `propagate`:
+Pass the per-cell `ModeSimulation` objects to [`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html) as a dict keyed by cell index. `web.run` preserves dict keys as task names in the returned mapping, so the results can be read back in canonical EME cell order and fed to `propagate`:
 
 ```python
 from tidy3d import web

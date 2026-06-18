@@ -10,7 +10,7 @@
 When you open the storage popover in the Tidy3D Python Web Notebook, you'll see your usage broken into:
 
 - **Notebook Total Usage** — everything in your notebook environment.
-- **Simulation Files** — your notebook, scripts, and other simulation files such as `.hdf5` / `.json` files you've saved from [web.run()](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.run.html) and similar calls, visible in the file browser.
+- **Simulation Files** — your notebook, scripts, and other simulation files such as `.hdf5` / `.json` files you've saved from [web.run()](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html) and similar calls, visible in the file browser.
 - **Hidden Files** — everything else in your home directory that doesn't show up in the file browser by default.
 - **Notebook Storage Limit** — your account's storage quota for this notebook environment (separate from your cloud workspace).
 
@@ -24,7 +24,7 @@ Hidden files and folders are entries whose name starts with a dot (`.cache`, `.j
 
 They are created automatically by the notebook and by Tidy3D itself, and typically include:
 
-- `.cache/tidy3d/` — the local Tidy3D simulation cache. Stores results of [web.run()](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.run.html) so re-running the same simulation doesn't re-download or re-execute it. This is usually the largest contributor.
+- `.cache/tidy3d/` — the local Tidy3D simulation cache. Stores results of [web.run()](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html) so re-running the same simulation doesn't re-download or re-execute it. This is usually the largest contributor.
 - `.ipynb_checkpoints/` — JupyterLab auto-save snapshots of your notebooks.
 - `.jupyter/`, `.local/`, `.config/` — JupyterLab and Python package settings.
 - `.git/` — if a folder is a git repository, this stores its history.

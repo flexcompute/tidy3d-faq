@@ -6,7 +6,7 @@ category: "Parameter Sweep"
 ---
 # How do I run a parameter sweep?
 
-[`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.run.run.html){: .color-primary-hover} is the unified interface for running simulations on the Tidy3D cloud.
+[`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html){: .color-primary-hover} is the unified interface for running simulations on the Tidy3D cloud.
 
 For parameter sweeps and multi-simulation workflows, `web.run` accepts not only a single simulation, but also dictionaries, lists, tuples, and nested combinations of these.
 

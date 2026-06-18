@@ -7,7 +7,7 @@
 
 # How do I submit multiple simulations?
 
-[`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.run.run.html) is the unified interface for running simulations on the Tidy3D cloud.
+[`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html) is the unified interface for running simulations on the Tidy3D cloud.
 
 For parameter scans and multi-simulation workflows, `web.run` accepts not only a single simulation, but also dictionaries, lists, tuples, and nested combinations of these.
 

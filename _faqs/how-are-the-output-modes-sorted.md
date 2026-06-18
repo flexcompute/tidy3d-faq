@@ -6,7 +6,7 @@ category: "Mode Solver"
 ---
 After running the Tidy3D <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a>, the modes are returned in a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolverData.html#tidy3d.plugins.mode.ModeSolverData">ModeSolverData</a> object. The solver finds the <code>num_modes</code> modes closest to <code>target_neff</code>. If no custom sorting is specified, the returned modes are ordered by decreasing effective index.
 
-To reproduce the old <code>filter_pol="te"</code> behavior, use a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/mode/_autosummary/tidy3d.ModeSortSpec.html#tidy3d.ModeSortSpec"><code>tidy3d.ModeSortSpec</code></a> that puts modes with <code>TE_fraction >= 0.5</code> first:
+To reproduce the old <code>filter_pol="te"</code> behavior, use a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.ModeSortSpec.html#tidy3d.ModeSortSpec"><code>tidy3d.ModeSortSpec</code></a> that puts modes with <code>TE_fraction >= 0.5</code> first:
 
 <code>tidy3d.ModeSortSpec(filter_key="TE_fraction", filter_reference=0.5)</code>
 

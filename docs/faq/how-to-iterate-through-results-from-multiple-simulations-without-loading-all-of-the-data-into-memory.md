@@ -7,7 +7,7 @@
 
 # How to iterate through results from a multi-simulation `web.run` workflow?
 
-When using [`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.run.run.html) on multiple simulations, the returned object preserves the **same input structure**. This works for dictionaries, lists, tuples, and nested combinations of them.
+When using [`web.run`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html) on multiple simulations, the returned object preserves the **same input structure**. This works for dictionaries, lists, tuples, and nested combinations of them.
 
 For example, when `web.run` is called on a dictionary of simulations, the returned object can be iterated over by task name:
 

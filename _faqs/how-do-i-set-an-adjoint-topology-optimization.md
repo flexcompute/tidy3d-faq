@@ -26,7 +26,7 @@ _inputs:
 ---
 To create an adjoint topology (or density-based) optimization setup, you can control the permittivity values of a [CustomMedium](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.CustomMedium.html){: .color-primary-hover} based on the optimization design parameters. 
 
-Once the simulation is defined, you can use the [web.run](https://docs.flexcompute.com/projects/tidy3d/en/v2.0.1/_autosummary/tidy3d.web.run.html){: .color-primary-hover} method to send the simulation to our servers and process the data as usual.
+Once the simulation is defined, you can use the [web.run](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html){: .color-primary-hover} method to send the simulation to our servers and process the data as usual.
 
 
 <div> </div>

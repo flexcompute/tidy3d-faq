@@ -34,28 +34,28 @@ You must delete older simulation files from your cloud storage. You can do this 
 Use the method:  
 <i>web.download(task_id)</i>  
 API documentation:  
-<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.download.html>
+<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.download.html>
 
 ### **Delete simulation data**
 
 Use the method:  
 <i>td.web.delete(task_id)</i>  
 API documentation:  
-<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.delete.html>
+<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.delete.html>
 
 ### **List recent simulations**
 
 Use:  
 <i>web.get_tasks</i>  
 Documentation:  
-<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.get_tasks.html>
+<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.get_tasks.html>
 
 ### **Automatically delete old simulations**
 
 Use:  
 <i>web.delete_old</i>  
 Documentation:  
-<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.delete_old.html>
+<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.delete_old.html>
 
 ---
 
@@ -64,7 +64,7 @@ Documentation:
 When you run a simulation using:  
 <i>web.run</i>  
 Documentation:  
-<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.run.html>
+<https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.run.html>
 
 Two things happen:
 

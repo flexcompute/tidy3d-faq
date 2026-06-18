@@ -4,11 +4,11 @@ date: 2025-09-16 13:50:36
 enabled: true
 category: "Web API"
 ---
-[`web.estimate_cost`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.estimate_cost.html){: .color-primary-hover} returns the **maximum** possible FlexCredit cost of running a simulation before it starts. This helps prevent accidentally launching overly expensive simulations.
+[`web.estimate_cost`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.estimate_cost.html){: .color-primary-hover} returns the **maximum** possible FlexCredit cost of running a simulation before it starts. This helps prevent accidentally launching overly expensive simulations.
 
-The real cost after running the simulation can be checked with the [`web.real_cost`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.real_cost.html){: .color-primary-hover} method.
+The real cost after running the simulation can be checked with the [`web.real_cost`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.real_cost.html){: .color-primary-hover} method.
 
-Note that the input parameter for `web.estimate_cost` and `web.real_cost` is the **task_id**, not the `Simulation` object. This ID is returned by the [`web.upload`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.webapi.upload.html){: .color-primary-hover} method when a simulation is created.
+Note that the input parameter for `web.estimate_cost` and `web.real_cost` is the **task_id**, not the `Simulation` object. This ID is returned by the [`web.upload`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.upload.html){: .color-primary-hover} method when a simulation is created.
 
 ## Example
 <div markdown class="code-snippet">

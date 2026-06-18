@@ -5,11 +5,11 @@
 | 2025-09-16 13:50:36 | Web API |
 
 
-[`Batch`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Batch.html) is a container for submitting, running, monitoring, and downloading **multiple simulations** on the Tidy3D cloud in one go. It’s similar to a [`web.Job`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Job.html), but for a whole set of simulations (FDTD, Heat/Charge, EME, Mode solver, etc.) that run in parallel.
+[`Batch`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.api.container.Batch.html) is a container for submitting, running, monitoring, and downloading **multiple simulations** on the Tidy3D cloud in one go. It’s similar to a [`web.Job`](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.web.Job.html), but for a whole set of simulations (FDTD, Heat/Charge, EME, Mode solver, etc.) that run in parallel.
 
 ## Estimating cost
 
-It is possible to estimate the maximum cost of the whole batch with the `Batch.estimate_cost` method. For more information on simulation cost, check [this](https://docs.flexcompute.com/projects/tidy3d/en/v2.7.6/faq/docs/faq/how-do-i-see-the-cost-of-my-simulation.html) article.
+It is possible to estimate the maximum cost of the whole batch with the `Batch.estimate_cost` method. For more information on simulation cost, check [this](https://docs.flexcompute.com/projects/tidy3d/en/latest/faq/docs/faq/how-do-i-see-the-cost-of-my-simulation.html) article.
 
 ## Running a batch
 
