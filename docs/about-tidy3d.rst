@@ -15,3 +15,6 @@ About Tidy3D
    faq/can-i-do-a-free-trial-to-evaluate-the-capabilities-of-tidy3d-before-purchasing-it.md
    faq/how-to-manage-storage-and-download-simulation-data-in-tidy3d.md
    faq/why-am-i-getting-a-storage-error.md
+   faq/why-is-my-tidy3d-notebook-storage-full-if-i-do-not-see-large-files.md
+   faq/how-do-i-control-the-local-cache-in-tidy3d.md
+   faq/what-are-the-hidden-files-in-the-python-web-notebook.md

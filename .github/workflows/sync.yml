@@ -15,7 +15,7 @@ on:
         required: true
       targetBranch:
         description: target branch
-        default: flexcompute/main
+        default: main
         required: true
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SOURCE_BRANCH: ${{ inputs.sourceBranch || 'develop' }}
-      TARGET_BRANCH: ${{ inputs.targetBranch || 'flexcompute/main' }}
+      TARGET_BRANCH: ${{ inputs.targetBranch || 'main' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

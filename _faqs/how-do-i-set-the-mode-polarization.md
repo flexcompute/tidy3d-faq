@@ -1,39 +1,19 @@
 ---
-_schema: default
-title: How do I set the mode polarization?
-date: 2023-12-18 22:25:04
+title: How Do I Set the Mode Polarization?
+date: 2026-04-28 18:51:48
 enabled: true
-category: Mode Solver
-_inputs:
-  title:
-    type: text
-    label: QUESTION TITLE
-  enabled:
-    type: switch
-    hidden: true
-  date:
-    type: datetime
-    label: DATE
-    instance_value: NOW
-  category:
-    type: select
-    options:
-      values: data.faq_categories
-      value_key: key
-      preview:
-        text:
-          - key: category_name
+category: "Mode Solver"
 ---
-<div>After running the Tidy3D&nbsp;<a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a>, the results are returned within a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolverData.html#tidy3d.plugins.mode.ModeSolverData">ModeSolverData</a> object. The solver always computes the&nbsp;<code>num_modes</code>&nbsp;modes closest to the given&nbsp;<code>target_neff</code>. If&nbsp;<code>filter_pol==None</code>, they are simply sorted in order of decreasing effective index. If a polarization filter is selected, the modes are rearranged such that the first&nbsp;<code>n_pol</code>&nbsp;modes in the list are the ones with the selected polarization fraction larger than or equal to 0.5, while the next&nbsp;<code>num_modes - n_pol</code>&nbsp;modes are the ones where it is smaller than 0.5 (i.e. the opposite polarization fraction is larger than 0.5). The modes are still ordered within each polarization subset by decreasing the effective index.</div>
+After running the Tidy3D <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolver.html#tidy3d.plugins.mode.ModeSolver">mode solver</a>, the results are returned within a <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.plugins.mode.ModeSolverData.html#tidy3d.plugins.mode.ModeSolverData">ModeSolverData</a> object. The solver computes the <code>num_modes</code> modes closest to the given <code>target_neff</code>. By default, modes are sorted by decreasing effective index.
 
-<div> </div>
+To prioritize modes with a desired polarization, use <a target="_blank" rel="noopener" href="https://docs.flexcompute.com/projects/tidy3d/en/latest/api/mode/_autosummary/tidy3d.ModeSortSpec.html#tidy3d.ModeSortSpec"><code>tidy3d.ModeSortSpec</code></a> through <code>ModeSpec.sort_spec</code>. For example, to return TE-like modes first, set <code>filter_key="TE_fraction"</code>, <code>filter_reference=0.5</code>. Modes with TE fraction greater than or equal to 0.5 are placed first, followed by the remaining modes. Within each group, modes use the default ordering by decreasing effective index.
 
-<div>The example below shows how to set the mode solver to return the TE modes first in the mode list.</div>
+The example below shows how to set the mode solver to return the TE modes first in the mode list.
 
-<div> </div>
-
-<div markdown class="code-snippet">{% highlight python %}
+<div markdown class="code-snippet">
+{% highlight python %}
 import numpy as np
+import tidy3d
 from tidy3d.plugins.mode import ModeSolver
 from tidy3d.plugins.mode.web import run as run_mode_solver
 
@@ -57,18 +37,21 @@ plane = tidy3d.Box(center=(0, 0, 0), size=(0, 2.5, 1.5))
 
 # Mode specification.
 mode_spec = tidy3d.ModeSpec(
-  num_modes=4,
-  target_neff=3.47,
-  filter_pol='te',
+    num_modes=4,
+    target_neff=3.47,
+    sort_spec=tidy3d.ModeSortSpec(
+        filter_key="TE_fraction",
+        filter_reference=0.5,
+    ),
 )
 
 # Build the mode solver.
 freq0 = tidy3d.C_0 / 1.55
 mode_solver = ModeSolver(
-  simulation=sim,
-  plane=plane,
-  mode_spec=mode_spec,
-  freqs=[freq0],
+    simulation=sim,
+    plane=plane,
+    mode_spec=mode_spec,
+    freqs=[freq0],
 )
 
 # Run the server-side mode solver.
@@ -77,8 +60,5 @@ mode_data = run_mode_solver(mode_solver)
 # Get the mode polarization fraction.
 print("TE polarization fraction:")
 print(np.asarray(mode_data.pol_fraction['te']).squeeze())
-
 {% endhighlight %}
 {% include copy-button.html %}</div>
-
-<div> </div>
