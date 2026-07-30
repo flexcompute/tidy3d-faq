@@ -1,0 +1,39 @@
+# How Do I Use Anisotropic Medium?
+
+| Date       | Category    |
+|------------|-------------|
+| 2025-09-24 11:50:54 | Inverse Design |
+
+
+The [AnisotropicMedium](https://docs.flexcompute.com/projects/tidy3d/en/latest/api/_autosummary/tidy3d.AnisotropicMedium.html) class is supported with the `autograd` plugin for diagonal anisotropy and can directly used in inverse design workflows.
+
+The following example shows how to create an anisotropic LN medium with the extraordinary axis aligned along the z-axis:
+
+
+
+```python
+import tidy3d as td
+
+# Define medium components
+n_e = 2.17
+n_o = 2.23
+
+medium_xx = td.Medium(permittivity=n_o**2)
+medium_yy = td.Medium(permittivity=n_o**2)
+medium_zz = td.Medium(permittivity=n_e**2)
+
+# Define anisotropic medium
+medium = td.AnisotropicMedium(xx=medium_xx, yy=medium_yy, zz=medium_zz)
+```
+
+
+
+Alternatively, you can use the built-in material library, which includes several anisotropic materials. For example, to load lithium niobate:
+
+
+
+```python
+LiNbO3 = td.material_library["LiNbO3"]["Zelmon1997"](2)
+```
+
+

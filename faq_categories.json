@@ -309,7 +309,8 @@
       "_faqs/how-do-i-include-fabrication-constraints-in-adjoint-shape-optimization.md",
       "_faqs/how-do-i-include-fabrication-constraints-in-adjoint-topology-optimization.md",
       "_faqs/how-do-i-include-fabrication-constraints-in-adjoint-level-set-optimization.md",
-      "_faqs/how-do-i-export-the-final-inverse-design-structure-to-gds.md"
+      "_faqs/how-do-i-export-the-final-inverse-design-structure-to-gds.md",
+      "_faqs/how-do-i-use-anisotropic-medium.md"
     ]
   },
   {
