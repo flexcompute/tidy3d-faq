@@ -32,9 +32,17 @@ If this doesn't work, proceed with the rest of this guide.
 
 ## Step 1: The Recommended & Most Secure Solution
 
-The most robust and secure solution is to have your IT department add the Tidy3D SSL certificate to your system's trust store. This allows your machine to verify our servers' identity correctly without disabling security features.
+The most robust and secure solution is to make sure your system trust store includes the root certificate that our servers use. This allows your machine to verify our servers' identity correctly without disabling security features.
 
-**Action**: Please ask your network administrator to whitelist the API endpoint `https://tidy3d-api.simulation.cloud` and install the following root certificate [https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem](https://github.com/flexcompute/tidy3d/blob/develop/tidy3d/web/api/cacert.pem)
+**Action**: Please ask your network administrator to whitelist the API endpoint `https://tidy3d-api.simulation.cloud` and make sure the system trust store includes the root certificate it chains to, Amazon Root CA 1: [https://www.amazontrust.com/repository/AmazonRootCA1.pem](https://www.amazontrust.com/repository/AmazonRootCA1.pem)
+
+If your network inspects HTTPS traffic, your IT team must also install the network's own inspection root certificate. Then point Python at a bundle that contains it by setting `REQUESTS_CA_BUNDLE` to the bundle path.
+
+**If you followed an earlier version of this FAQ:** it linked to a full certificate bundle (`cacert.pem`) from the `tidy3d` repository. That bundle is an old copy of the `certifi` package and trusts certificate authorities that are no longer trusted, including emSign ECC Root CA - G3. Please remove that bundle from any system trust store and trust Amazon Root CA 1 instead. We also recommend updating certifi in each Python environment where you use Tidy3D:
+
+```bash
+python -m pip install --upgrade "certifi>=2026.10.19"
+```
 
 If these steps do not resolve your issue, please contact our support team and provide the logs from the commands you have tried.
 
@@ -76,98 +84,45 @@ Before changing any settings, let's make sure you can reach the Tidy3D servers.
 
 Note that many networks can block ping messages so this is not a foolproof check.
 
-## Step 3: Disable SSL Verification (Quick Workaround)
+## Step 3: Disable SSL Verification (Diagnosis Only)
 
-**As a temporary solution**, you can instruct `tidy3d` to bypass SSL certificate verification. This is not ideal for security but is useful for confirming the source of the problem.
+**Only to confirm that SSL verification is the cause**, you can instruct `tidy3d` to skip SSL certificate verification. Turn it back on as soon as you have your answer. With verification off, anyone who can intercept your network traffic can read your API key and your simulation data.
 
-This is done by setting the `TIDY3D_SSL_VERIFY` environment variable to `false`.
+In `tidy3d` 2.11 and later, set the `TIDY3D_WEB__SSL_VERIFY` environment variable to `false`. Version 2.12 ignores the older `TIDY3D_SSL_VERIFY` variable.
 
 #### Setting the Environment Variable:
 
 * **On Windows (in Command Prompt)**:
 
   ```bash
-  set TIDY3D_SSL_VERIFY=false
+  set TIDY3D_WEB__SSL_VERIFY=false
   ```
-
-  To set it permanently, use `setx TIDY3D_SSL_VERIFY false`.
 
 * **On macOS or Linux (in a bash terminal)**:
 
   ```bash
-  export TIDY3D_SSL_VERIFY="false"
+  export TIDY3D_WEB__SSL_VERIFY="false"
   ```
 
-Note thet the user could run into unexpected server communication issues by disabling SSL. This is not recommended.
+Do not set it permanently. Remove it with `set TIDY3D_WEB__SSL_VERIFY=` on Windows or `unset TIDY3D_WEB__SSL_VERIFY` on macOS or Linux once you are done.
 
-#### Verifying the Environment Variable:
+#### Verifying the Setting:
 
-**It is essential to ensure the variable is set correctly within the environment where you run your script.**
-
-* **In your terminal**, run the following command.
-
-  * Windows: `echo %TIDY3D_SSL_VERIFY%`
-  * macOS/Linux: `echo $TIDY3D_SSL_VERIFY`
-  * The output should be `false`.
-
-* **Inside your Python script**, add these lines to the top to see what value the script is reading:
+**It is essential to check the setting within the environment where you run your script.** Inside Python, run:
 
 ```python
-import os
-print(f"TIDY3D_SSL_VERIFY is set to: {os.getenv('TIDY3D_SSL_VERIFY')}")
+from tidy3d.config import config
+print(f"SSL verification enabled: {config.web.ssl_verify}")
 ```
 
-When you run your script, you should see the confirmation printed. If you see `None` or an empty string, the variable was not set correctly in your current session.
+The output should be `False` while the workaround is active.
 
-## Step 4: Run a Diagnostic Script
+## Step 4: Run the Connection Diagnostics
 
-If the issue persists, running a minimal script can help isolate the problem to the `requests` library, which `tidy3d` uses for communication.
+If the issue persists, run the built-in diagnostics (`tidy3d` 2.12 and later) from the same environment where you use `tidy3d`:
 
-1.  Save the following code as a Python file (e.g., `test_connection.py`).
-2.  Set the `TIDY3D_API_KEY` and `TIDY3D_SSL_VERIFY` environment variables in your terminal as shown in Step 2.
-3.  Run the script with `python test_connection.py`.
-
-
-```python
-# test_connection.py
-import os
-import requests
-from tidy3d.web.core.constants import HEADER_APIKEY
-from tidy3d.web.core.environment import Env
-
-def auth(req):
-    """Adds the API key to the request header."""
-    # Ensure TIDY3D_API_KEY is set in your environment
-    req.headers[HEADER_APIKEY] = os.getenv("TIDY3D_API_KEY")
-    return req
-
-# Let tidy3d's environment configuration read the SSL variable
-# It reads from the TIDY3D_SSL_VERIFY environment variable.
-ssl_verify_setting = Env.current.ssl_verify
-
-print(f"API Endpoint: {Env.current.web_api_endpoint}")
-print(f"SSL Verification Enabled: {ssl_verify_setting}")
-
-if not ssl_verify_setting:
-    # Suppress the warning that will be printed for unverified requests
-    requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
-    print("InsecureRequestWarning suppressed.")
-
-try:
-    req = requests.Request("GET", f"{Env.current.web_api_endpoint}/apikey")
-    auth(req)
-    resp = requests.get(req.url, headers=req.headers, verify=ssl_verify_setting)
-    
-    print(f"Response: {resp}")
-    print(f"Status Code: {resp.status_code}")
-    print(f"Response Content: {resp.content}")
-
-except requests.exceptions.SSLError as e:
-    print(f"\nCaught an SSLError. This is the core issue.\nDetails: {e}")
-
-except Exception as e:
-    print(f"\nAn unexpected error occurred: {e}")
-
+```bash
+tidy3d diagnose-connection
 ```
 
-With `TIDY3D_SSL_VERIFY` set to `false` and `TIDY3D_API_KEY` set correctly, the expected output is a `status code: 200` and content containing your API key. You will also see an `InsecureRequestWarning` if you don't suppress it.
+It checks the network path, API health, authentication, latency and storage downloads, and prints a summary with recommended next steps. For certificate errors it suggests the fix. The output can include network details such as proxy settings, certificate paths and resolved IP addresses, so review it before sharing it. Please include it when you contact our support team.
